@@ -56,15 +56,71 @@
 		BC61603F27788DDF00093443 /* Nysa App */ = {
 			isa = PBXGroup;
 			children = (
-				BC61604027788DDF00093443 /* AppDelegate.swift */,
-				BC61604227788DDF00093443 /* SceneDelegate.swift */,
-				BC61604427788DDF00093443 /* ViewController.swift */,
-				BC61604627788DDF00093443 /* Main.storyboard */,
+				BC61605A27788F5700093443 /* Support Files */,
+				BC61605927788F4F00093443 /* Model */,
+				BC61605527788F0F00093443 /* View */,
+				BC61605627788F1600093443 /* Controller */,
+				BC61605B27788F9A00093443 /* Cells */,
+				BC61605827788F2500093443 /* API Service */,
+				BC61605727788F1D00093443 /* Fonts */,
 				BC61604927788DE100093443 /* Assets.xcassets */,
-				BC61604B27788DE100093443 /* LaunchScreen.storyboard */,
 				BC61604E27788DE100093443 /* Info.plist */,
 			);
 			path = "Nysa App";
+			sourceTree = "<group>";
+		};
+		BC61605527788F0F00093443 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC61604627788DDF00093443 /* Main.storyboard */,
+				BC61604B27788DE100093443 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC61605627788F1600093443 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC61604427788DDF00093443 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC61605727788F1D00093443 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BC61605827788F2500093443 /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		BC61605927788F4F00093443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC61605A27788F5700093443 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC61604227788DDF00093443 /* SceneDelegate.swift */,
+				BC61604027788DDF00093443 /* AppDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		BC61605B27788F9A00093443 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
