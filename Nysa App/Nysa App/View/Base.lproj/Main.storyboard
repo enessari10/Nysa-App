@@ -278,20 +278,102 @@
         <!--Newspaper-->
         <scene sceneID="Wdk-QS-ixi">
             <objects>
-                <viewController id="uHq-3d-ana" sceneMemberID="viewController">
+                <viewController id="uHq-3d-ana" customClass="NewspaperViewController" customModule="Nysa_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzW-VF-Yya">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-0g-avj">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="843" id="0pu-Bk-Tbf"/>
+                                    <constraint firstAttribute="width" constant="428" id="Wwf-vQ-SnE"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="230" id="OaW-9t-pBV" customClass="NewsTableViewCell" customModule="Nysa_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OaW-9t-pBV" id="pzn-gs-OVb">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbImages" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-vN-aFV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="428" height="230"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="230" id="Lja-qR-nxy"/>
+                                                        <constraint firstAttribute="width" constant="428" id="gDF-15-xun"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsBG" translatesAutoresizingMaskIntoConstraints="NO" id="VoH-Ze-V38">
+                                                    <rect key="frame" x="0.0" y="135" width="428" height="98"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="428" id="7Aa-A9-RY1"/>
+                                                        <constraint firstAttribute="height" constant="98" id="yUj-8w-3FC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-ua-gOV">
+                                                    <rect key="frame" x="13" y="147" width="402" height="16"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-2t-6vh">
+                                                    <rect key="frame" x="13" y="164" width="402" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="ShO-NC-Fq8"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="403" id="qvT-zb-nWJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="leading" secondItem="XSO-2t-6vh" secondAttribute="leading" id="4v9-mP-4Mk"/>
+                                                <constraint firstAttribute="trailing" secondItem="9ix-vN-aFV" secondAttribute="trailing" id="PSr-42-SVO"/>
+                                                <constraint firstAttribute="trailing" secondItem="VoH-Ze-V38" secondAttribute="trailing" id="PcJ-Bc-hZc"/>
+                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="centerX" secondItem="XSO-2t-6vh" secondAttribute="centerX" id="WkY-Lf-ehA"/>
+                                                <constraint firstAttribute="bottom" secondItem="VoH-Ze-V38" secondAttribute="bottom" constant="-3" id="ZBb-um-J2i"/>
+                                                <constraint firstItem="9ix-vN-aFV" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" id="ciy-CE-8P7"/>
+                                                <constraint firstAttribute="bottom" secondItem="XSO-2t-6vh" secondAttribute="bottom" constant="6" id="euy-bI-FJV"/>
+                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="top" secondItem="hrf-ua-gOV" secondAttribute="bottom" constant="1" id="g7y-Ub-7SN"/>
+                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" constant="13" id="gU4-pS-Pto"/>
+                                                <constraint firstItem="9ix-vN-aFV" firstAttribute="top" secondItem="pzn-gs-OVb" secondAttribute="top" id="iP5-gJ-5AQ"/>
+                                                <constraint firstItem="VoH-Ze-V38" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" id="qo3-vN-uhb"/>
+                                                <constraint firstAttribute="trailing" secondItem="XSO-2t-6vh" secondAttribute="trailing" constant="13" id="ujF-Nh-iL3"/>
+                                                <constraint firstAttribute="bottom" secondItem="9ix-vN-aFV" secondAttribute="bottom" id="wBc-65-Lq8"/>
+                                                <constraint firstItem="VoH-Ze-V38" firstAttribute="top" secondItem="pzn-gs-OVb" secondAttribute="top" constant="135" id="zdc-C7-5N3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsDesc" destination="XSO-2t-6vh" id="AqC-FV-JEu"/>
+                                            <outlet property="newsHead" destination="hrf-ua-gOV" id="ffx-Yv-Ev6"/>
+                                            <outlet property="newsImageView" destination="9ix-vN-aFV" id="094-uh-cVL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9TW-TE-UxW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TXw-0g-avj" firstAttribute="bottom" secondItem="9TW-TE-UxW" secondAttribute="bottom" id="IN4-TZ-Vmi"/>
+                            <constraint firstItem="TXw-0g-avj" firstAttribute="top" secondItem="xzW-VF-Yya" secondAttribute="top" id="KkV-Dp-eom"/>
+                            <constraint firstItem="TXw-0g-avj" firstAttribute="leading" secondItem="9TW-TE-UxW" secondAttribute="leading" id="RwN-qD-3q9"/>
+                            <constraint firstItem="TXw-0g-avj" firstAttribute="trailing" secondItem="9TW-TE-UxW" secondAttribute="trailing" id="tNt-HY-Rpz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Newspaper" image="newspaper.fill" catalog="system" id="cQr-jz-Igh">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="newsTableView" destination="TXw-0g-avj" id="aMk-in-Wmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoK-nk-ge2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="710"/>
+            <point key="canvasLocation" x="640.65420560747657" y="709.50323974082073"/>
         </scene>
         <!--Weather-->
         <scene sceneID="b93-lD-vtj">
@@ -354,7 +436,9 @@
         <image name="boxShowImage" width="80.666664123535156" height="25.333333969116211"/>
         <image name="categoryBG" width="81.333335876464844" height="81.666664123535156"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
+        <image name="fbImages" width="377" height="212"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="newsBG" width="377.33334350585938" height="88.333335876464844"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="newspaperBG" width="376.66665649414062" height="101.33333587646484"/>
         <image name="sportImages" width="46.666667938232422" height="46.333332061767578"/>

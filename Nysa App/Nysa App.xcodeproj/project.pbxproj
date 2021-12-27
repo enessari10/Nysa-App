@@ -13,6 +13,10 @@
 		BC61604827788DDF00093443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604627788DDF00093443 /* Main.storyboard */; };
 		BC61604A27788DE100093443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC61604927788DE100093443 /* Assets.xcassets */; };
 		BC61604D27788DE100093443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604B27788DE100093443 /* LaunchScreen.storyboard */; };
+		BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */; };
+		BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */; };
+		BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */; };
+		BC6EE41B2779F69100306EE3 /* NewspaperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */; };
 		BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */; };
 		BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */; };
 		BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */; };
@@ -33,6 +37,10 @@
 		BC61604927788DE100093443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC61604C27788DE100093443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC61604E27788DE100093443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperAPI.swift; sourceTree = "<group>"; };
+		BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperViewController.swift; sourceTree = "<group>"; };
+		BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperClass.swift; sourceTree = "<group>"; };
 		BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Light Az.otf"; sourceTree = "<group>"; };
 		BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Bold Az.otf"; sourceTree = "<group>"; };
@@ -68,7 +76,6 @@
 				01F75EB6678DDBF523DCC90C /* Pods-Nysa App.debug.xcconfig */,
 				0CB317EC242F8705A1DAB589 /* Pods-Nysa App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */,
+				BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 		BC61605827788F2500093443 /* API Service */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 		BC61605927788F4F00093443 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +173,7 @@
 				BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */,
 				BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */,
 				BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */,
+				BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -296,8 +307,12 @@
 				BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */,
 				BC61604127788DDF00093443 /* AppDelegate.swift in Sources */,
 				BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */,
+				BC6EE41B2779F69100306EE3 /* NewspaperClass.swift in Sources */,
+				BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */,
+				BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */,
 				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,
 				BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */,
+				BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
