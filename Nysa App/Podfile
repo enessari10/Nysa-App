@@ -6,6 +6,7 @@ target 'Nysa App' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SwiftyJSON'
   # Pods for Nysa App
 
 end
