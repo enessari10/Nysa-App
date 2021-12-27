@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		BC61604127788DDF00093443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604027788DDF00093443 /* AppDelegate.swift */; };
 		BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604227788DDF00093443 /* SceneDelegate.swift */; };
-		BC61604527788DDF00093443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604427788DDF00093443 /* ViewController.swift */; };
 		BC61604827788DDF00093443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604627788DDF00093443 /* Main.storyboard */; };
 		BC61604A27788DE100093443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC61604927788DE100093443 /* Assets.xcassets */; };
 		BC61604D27788DE100093443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604B27788DE100093443 /* LaunchScreen.storyboard */; };
+		BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */; };
+		BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */; };
+		BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */; };
+		BCC570372779DAFE00E42DD8 /* Sofia Pro Bold Az.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */; };
+		BCC570382779DAFE00E42DD8 /* Sofia Pro Light Az.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */; };
+		BCC570392779DAFE00E42DD8 /* Sofia Pro Medium Az.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCC570322779CC3100E42DD8 /* Sofia Pro Medium Az.otf */; };
+		BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC61603D27788DDF00093443 /* Nysa App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nysa App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61604027788DDF00093443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC61604227788DDF00093443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC61604427788DDF00093443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC61604727788DDF00093443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC61604927788DE100093443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC61604C27788DE100093443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC61604E27788DE100093443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Light Az.otf"; sourceTree = "<group>"; };
+		BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Bold Az.otf"; sourceTree = "<group>"; };
+		BCC570322779CC3100E42DD8 /* Sofia Pro Medium Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Medium Az.otf"; sourceTree = "<group>"; };
+		BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperTableViewCell.swift; sourceTree = "<group>"; };
+		BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 				BC61605B27788F9A00093443 /* Cells */,
 				BC61605827788F2500093443 /* API Service */,
 				BC61605727788F1D00093443 /* Fonts */,
+				BC61605C2778917300093443 /* Lottie */,
 				BC61604927788DE100093443 /* Assets.xcassets */,
 				BC61604E27788DE100093443 /* Info.plist */,
 			);
@@ -81,7 +94,7 @@
 		BC61605627788F1600093443 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BC61604427788DDF00093443 /* ViewController.swift */,
+				BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,6 +102,9 @@
 		BC61605727788F1D00093443 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */,
+				BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */,
+				BCC570322779CC3100E42DD8 /* Sofia Pro Medium Az.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -119,8 +135,18 @@
 		BC61605B27788F9A00093443 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */,
+				BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */,
+				BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		BC61605C2778917300093443 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +207,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC570372779DAFE00E42DD8 /* Sofia Pro Bold Az.otf in Resources */,
+				BCC570382779DAFE00E42DD8 /* Sofia Pro Light Az.otf in Resources */,
+				BCC570392779DAFE00E42DD8 /* Sofia Pro Medium Az.otf in Resources */,
 				BC61604D27788DE100093443 /* LaunchScreen.storyboard in Resources */,
 				BC61604A27788DE100093443 /* Assets.xcassets in Resources */,
 				BC61604827788DDF00093443 /* Main.storyboard in Resources */,
@@ -194,9 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC61604527788DDF00093443 /* ViewController.swift in Sources */,
+				BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */,
+				BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */,
 				BC61604127788DDF00093443 /* AppDelegate.swift in Sources */,
 				BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */,
+				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,
+				BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
