@@ -193,10 +193,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="DMb-kD-jD7" secondAttribute="trailing" constant="229" id="GZ0-sX-b80"/>
                                                 <constraint firstItem="DMb-kD-jD7" firstAttribute="top" secondItem="jAA-8S-PPo" secondAttribute="top" constant="10" id="NkW-cI-z5s"/>
                                                 <constraint firstItem="MDp-Is-ofY" firstAttribute="leading" secondItem="jAA-8S-PPo" secondAttribute="leading" id="ZQp-aY-30d"/>
                                                 <constraint firstAttribute="bottom" secondItem="MDp-Is-ofY" secondAttribute="bottom" id="afl-Nb-EGQ"/>
-                                                <constraint firstItem="DMb-kD-jD7" firstAttribute="leading" secondItem="jAA-8S-PPo" secondAttribute="leading" constant="20" id="bpN-PK-Zg8"/>
+                                                <constraint firstItem="DMb-kD-jD7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jAA-8S-PPo" secondAttribute="leading" symbolic="YES" id="bpN-PK-Zg8"/>
                                                 <constraint firstItem="MDp-Is-ofY" firstAttribute="bottom" secondItem="eFT-Fj-8Od" secondAttribute="bottom" id="niv-g2-vYj"/>
                                                 <constraint firstItem="MDp-Is-ofY" firstAttribute="trailing" secondItem="eFT-Fj-8Od" secondAttribute="trailing" id="yEL-eu-F2a"/>
                                             </constraints>
@@ -265,7 +266,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="65e-Oo-c5r" kind="relationship" relationship="viewControllers" id="jPZ-8g-8tw"/>
-                        <segue destination="uHq-3d-ana" kind="relationship" relationship="viewControllers" id="2dc-IY-hm8"/>
+                        <segue destination="erf-eL-RTp" kind="relationship" relationship="viewControllers" id="2dc-IY-hm8"/>
                         <segue destination="99q-wO-f5h" kind="relationship" relationship="viewControllers" id="XNh-qg-6Pe"/>
                         <segue destination="Ocj-z7-U6J" kind="relationship" relationship="viewControllers" id="XeU-1M-lqb"/>
                         <segue destination="xCp-JT-tBg" kind="relationship" relationship="viewControllers" id="TKZ-r2-GGO"/>
@@ -275,7 +276,7 @@
             </objects>
             <point key="canvasLocation" x="217" y="-17"/>
         </scene>
-        <!--Newspaper-->
+        <!--Newspaper View Controller-->
         <scene sceneID="Wdk-QS-ixi">
             <objects>
                 <viewController id="uHq-3d-ana" customClass="NewspaperViewController" customModule="Nysa_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -283,6 +284,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-Gf-8L3" customClass="AnimationView" customModule="Lottie ">
+                                <rect key="frame" x="94" y="443" width="240" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8cM-2j-OG2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loading"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TXw-0g-avj">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -298,7 +309,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fbImages" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-vN-aFV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="404" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-vN-aFV">
                                                     <rect key="frame" x="0.0" y="0.0" width="428" height="230"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="230" id="Lja-qR-nxy"/>
@@ -312,37 +323,43 @@
                                                         <constraint firstAttribute="height" constant="98" id="yUj-8w-3FC"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-ua-gOV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Lorem Ipsum? What is Lorem Ipsum?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-ua-gOV">
                                                     <rect key="frame" x="13" y="147" width="402" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="Nch-lS-Ni7"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="403" id="xhC-TR-wdf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-2t-6vh">
-                                                    <rect key="frame" x="13" y="164" width="402" height="60"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSO-2t-6vh">
+                                                    <rect key="frame" x="13" y="163" width="402" height="67"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="ShO-NC-Fq8"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="403" id="qvT-zb-nWJ"/>
+                                                        <constraint firstAttribute="height" constant="67" id="r2o-Ea-3u3"/>
                                                     </constraints>
+                                                    <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
                                                     <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="leading" secondItem="XSO-2t-6vh" secondAttribute="leading" id="4v9-mP-4Mk"/>
+                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="top" secondItem="hrf-ua-gOV" secondAttribute="bottom" id="Ef8-YC-1vi"/>
+                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" constant="13" id="HJF-X0-W7M"/>
                                                 <constraint firstAttribute="trailing" secondItem="9ix-vN-aFV" secondAttribute="trailing" id="PSr-42-SVO"/>
                                                 <constraint firstAttribute="trailing" secondItem="VoH-Ze-V38" secondAttribute="trailing" id="PcJ-Bc-hZc"/>
-                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="centerX" secondItem="XSO-2t-6vh" secondAttribute="centerX" id="WkY-Lf-ehA"/>
                                                 <constraint firstAttribute="bottom" secondItem="VoH-Ze-V38" secondAttribute="bottom" constant="-3" id="ZBb-um-J2i"/>
                                                 <constraint firstItem="9ix-vN-aFV" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" id="ciy-CE-8P7"/>
-                                                <constraint firstAttribute="bottom" secondItem="XSO-2t-6vh" secondAttribute="bottom" constant="6" id="euy-bI-FJV"/>
-                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="top" secondItem="hrf-ua-gOV" secondAttribute="bottom" constant="1" id="g7y-Ub-7SN"/>
-                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" constant="13" id="gU4-pS-Pto"/>
                                                 <constraint firstItem="9ix-vN-aFV" firstAttribute="top" secondItem="pzn-gs-OVb" secondAttribute="top" id="iP5-gJ-5AQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="XSO-2t-6vh" secondAttribute="trailing" constant="13" id="lHF-JP-pru"/>
+                                                <constraint firstAttribute="trailing" secondItem="hrf-ua-gOV" secondAttribute="trailing" constant="13" id="oNc-jw-uTK"/>
+                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" constant="13" id="q0B-mf-oE5"/>
                                                 <constraint firstItem="VoH-Ze-V38" firstAttribute="leading" secondItem="pzn-gs-OVb" secondAttribute="leading" id="qo3-vN-uhb"/>
-                                                <constraint firstAttribute="trailing" secondItem="XSO-2t-6vh" secondAttribute="trailing" constant="13" id="ujF-Nh-iL3"/>
+                                                <constraint firstItem="hrf-ua-gOV" firstAttribute="top" secondItem="pzn-gs-OVb" secondAttribute="top" constant="147" id="sEq-SF-q6M"/>
                                                 <constraint firstAttribute="bottom" secondItem="9ix-vN-aFV" secondAttribute="bottom" id="wBc-65-Lq8"/>
+                                                <constraint firstItem="XSO-2t-6vh" firstAttribute="top" secondItem="hrf-ua-gOV" secondAttribute="bottom" id="xM8-15-wk6"/>
+                                                <constraint firstAttribute="bottom" secondItem="XSO-2t-6vh" secondAttribute="bottom" id="xY2-5e-gQd"/>
                                                 <constraint firstItem="VoH-Ze-V38" firstAttribute="top" secondItem="pzn-gs-OVb" secondAttribute="top" constant="135" id="zdc-C7-5N3"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -361,19 +378,23 @@
                             <constraint firstItem="TXw-0g-avj" firstAttribute="bottom" secondItem="9TW-TE-UxW" secondAttribute="bottom" id="IN4-TZ-Vmi"/>
                             <constraint firstItem="TXw-0g-avj" firstAttribute="top" secondItem="xzW-VF-Yya" secondAttribute="top" id="KkV-Dp-eom"/>
                             <constraint firstItem="TXw-0g-avj" firstAttribute="leading" secondItem="9TW-TE-UxW" secondAttribute="leading" id="RwN-qD-3q9"/>
+                            <constraint firstItem="QVw-Gf-8L3" firstAttribute="centerX" secondItem="xzW-VF-Yya" secondAttribute="centerX" id="Uaw-wn-lew"/>
+                            <constraint firstItem="9TW-TE-UxW" firstAttribute="trailing" secondItem="QVw-Gf-8L3" secondAttribute="trailing" constant="94" id="XvX-ne-fQ0"/>
+                            <constraint firstItem="QVw-Gf-8L3" firstAttribute="top" secondItem="9TW-TE-UxW" secondAttribute="top" constant="355" id="iod-8L-iLS"/>
                             <constraint firstItem="TXw-0g-avj" firstAttribute="trailing" secondItem="9TW-TE-UxW" secondAttribute="trailing" id="tNt-HY-Rpz"/>
+                            <constraint firstItem="9TW-TE-UxW" firstAttribute="bottom" secondItem="QVw-Gf-8L3" secondAttribute="bottom" constant="316" id="unL-PT-SVN"/>
+                            <constraint firstItem="QVw-Gf-8L3" firstAttribute="leading" secondItem="9TW-TE-UxW" secondAttribute="leading" constant="94" id="w1p-ic-ul1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Newspaper" image="newspaper.fill" catalog="system" id="cQr-jz-Igh">
-                        <color key="badgeColor" name="AccentColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="dg3-9k-bOb"/>
                     <connections>
+                        <outlet property="animationView" destination="QVw-Gf-8L3" id="lBk-2G-ehm"/>
                         <outlet property="newsTableView" destination="TXw-0g-avj" id="aMk-in-Wmj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoK-nk-ge2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="640.65420560747657" y="709.50323974082073"/>
+            <point key="canvasLocation" x="1540.6542056074766" y="709.50323974082073"/>
         </scene>
         <!--Weather-->
         <scene sceneID="b93-lD-vtj">
@@ -409,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3G-Yp-4dT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="710"/>
+            <point key="canvasLocation" x="2409.8130841121492" y="709.50323974082073"/>
         </scene>
         <!--Coins-->
         <scene sceneID="RDj-Wt-1jT">
@@ -427,16 +448,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWO-yd-X0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="710"/>
+            <point key="canvasLocation" x="3271.9626168224299" y="709.50323974082073"/>
+        </scene>
+        <!--Newspaper-->
+        <scene sceneID="Agz-Yp-NVp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="erf-eL-RTp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Newspaper" image="newspaper.fill" catalog="system" id="cQr-jz-Igh">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bYB-my-D9L">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uHq-3d-ana" kind="relationship" relationship="rootViewController" id="Fxb-WD-m73"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2f-J8-YoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640.65420560747657" y="709.50323974082073"/>
         </scene>
     </scenes>
     <resources>
+        <image name="404" width="333.33334350585938" height="333.33334350585938"/>
         <image name="banknote.fill" catalog="system" width="128" height="78"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="boxShowImage" width="80.666664123535156" height="25.333333969116211"/>
         <image name="categoryBG" width="81.333335876464844" height="81.666664123535156"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="95"/>
-        <image name="fbImages" width="377" height="212"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="newsBG" width="377.33334350585938" height="88.333335876464844"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>

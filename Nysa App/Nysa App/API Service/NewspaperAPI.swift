@@ -6,13 +6,12 @@
 //
 
 import Foundation
-
+import UIKit
 class NewspaperAPI{
     
-    let token = "pub_3121274797e10456c52dbc3cecba68b4fdaa"
-    let newspaperURL = "https://newsdata.io/api/1/news?&language=tr&apikey=pub_3121274797e10456c52dbc3cecba68b4fdaa"
+    let token = "pub_3121274797e10456c52dbc3cecba68b4fdaa&"
+    let countryCode = "language=tr"
+    let newspaperURL = "https://newsdata.io/api/1/news?&apikey="
     let categoryArray = ["business","entertainment","environment","food","health","politics","science","sports","technology","top","world"]
-                         
-   
-              
+    let categoryImages = [UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),]
 }

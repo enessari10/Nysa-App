@@ -16,7 +16,8 @@
 		BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */; };
 		BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */; };
 		BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */; };
-		BC6EE41B2779F69100306EE3 /* NewspaperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */; };
+		BC6EE41B2779F69100306EE3 /* NewspaperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */; };
+		BC6EE41F277A38B400306EE3 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EE41E277A38B400306EE3 /* loading.json */; };
 		BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */; };
 		BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */; };
 		BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */; };
@@ -40,7 +41,8 @@
 		BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperAPI.swift; sourceTree = "<group>"; };
 		BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperViewController.swift; sourceTree = "<group>"; };
 		BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperClass.swift; sourceTree = "<group>"; };
+		BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperModel.swift; sourceTree = "<group>"; };
+		BC6EE41E277A38B400306EE3 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Light Az.otf"; sourceTree = "<group>"; };
 		BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Bold Az.otf"; sourceTree = "<group>"; };
@@ -153,7 +155,7 @@
 		BC61605927788F4F00093443 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC6EE41A2779F69100306EE3 /* NewspaperClass.swift */,
+				BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 		BC61605C2778917300093443 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				BC6EE41E277A38B400306EE3 /* loading.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				BCC570382779DAFE00E42DD8 /* Sofia Pro Light Az.otf in Resources */,
 				BCC570392779DAFE00E42DD8 /* Sofia Pro Medium Az.otf in Resources */,
 				BC61604D27788DE100093443 /* LaunchScreen.storyboard in Resources */,
+				BC6EE41F277A38B400306EE3 /* loading.json in Resources */,
 				BC61604A27788DE100093443 /* Assets.xcassets in Resources */,
 				BC61604827788DDF00093443 /* Main.storyboard in Resources */,
 			);
@@ -307,7 +311,7 @@
 				BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */,
 				BC61604127788DDF00093443 /* AppDelegate.swift in Sources */,
 				BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */,
-				BC6EE41B2779F69100306EE3 /* NewspaperClass.swift in Sources */,
+				BC6EE41B2779F69100306EE3 /* NewspaperModel.swift in Sources */,
 				BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */,
 				BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */,
 				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,

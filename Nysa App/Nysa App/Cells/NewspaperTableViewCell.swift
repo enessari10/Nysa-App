@@ -10,9 +10,7 @@ import UIKit
 class NewspaperTableViewCell: UITableViewCell {
 
     @IBOutlet var newspaperCollectionView: UICollectionView!
-    
-    var myArray = ["Sports", "World", "Magazine", "Gündem"]
-    var imageArray = [UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages")]
+    var newspaperAPI = NewspaperAPI()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +20,7 @@ class NewspaperTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 
@@ -30,13 +28,13 @@ class NewspaperTableViewCell: UITableViewCell {
 
 extension NewspaperTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myArray.count
+        return newspaperAPI.categoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newspaperCollectionCell", for: indexPath) as! NewspaperCollectionViewCell
-        cell.categoryLabel.text = myArray[indexPath.row]
-        cell.categoryImage.image = imageArray[indexPath.row]
+        cell.categoryLabel.text = newspaperAPI.categoryArray[indexPath.row]
+        cell.categoryImage.image = newspaperAPI.categoryImages[indexPath.row]
         return cell
     }
     

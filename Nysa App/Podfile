@@ -7,6 +7,8 @@ target 'Nysa App' do
 
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'AlamofireImage'
+  pod 'lottie-ios'
   # Pods for Nysa App
 
 end
