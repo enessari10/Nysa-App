@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         homeTableVİew.delegate = self
         homeTableVİew.dataSource = self
-
+    
     }
     
 

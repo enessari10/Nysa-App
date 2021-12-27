@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10FC6ACA97A99086D5C208D0 /* Pods_Nysa_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCDBD24630CE3923E55FBA1 /* Pods_Nysa_App.framework */; };
 		BC61604127788DDF00093443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604027788DDF00093443 /* AppDelegate.swift */; };
 		BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604227788DDF00093443 /* SceneDelegate.swift */; };
 		BC61604827788DDF00093443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604627788DDF00093443 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F75EB6678DDBF523DCC90C /* Pods-Nysa App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nysa App.debug.xcconfig"; path = "Target Support Files/Pods-Nysa App/Pods-Nysa App.debug.xcconfig"; sourceTree = "<group>"; };
+		0CB317EC242F8705A1DAB589 /* Pods-Nysa App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nysa App.release.xcconfig"; path = "Target Support Files/Pods-Nysa App/Pods-Nysa App.release.xcconfig"; sourceTree = "<group>"; };
+		2DCDBD24630CE3923E55FBA1 /* Pods_Nysa_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nysa_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61603D27788DDF00093443 /* Nysa App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nysa App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61604027788DDF00093443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC61604227788DDF00093443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FC6ACA97A99086D5C208D0 /* Pods_Nysa_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85A7C8365C775553B908DE45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DCDBD24630CE3923E55FBA1 /* Pods_Nysa_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB4140EFD00ECFFC1F5334CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01F75EB6678DDBF523DCC90C /* Pods-Nysa App.debug.xcconfig */,
+				0CB317EC242F8705A1DAB589 /* Pods-Nysa App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BC61603427788DDF00093443 = {
 			isa = PBXGroup;
 			children = (
 				BC61603F27788DDF00093443 /* Nysa App */,
 				BC61603E27788DDF00093443 /* Products */,
+				AB4140EFD00ECFFC1F5334CD /* Pods */,
+				85A7C8365C775553B908DE45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC61605127788DE100093443 /* Build configuration list for PBXNativeTarget "Nysa App" */;
 			buildPhases = (
+				8A6152507B83A9EA2AC234E5 /* [CP] Check Pods Manifest.lock */,
 				BC61603927788DDF00093443 /* Sources */,
 				BC61603A27788DDF00093443 /* Frameworks */,
 				BC61603B27788DDF00093443 /* Resources */,
+				DB79C93E1F891BEFF3E57153 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +244,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A6152507B83A9EA2AC234E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nysa App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB79C93E1F891BEFF3E57153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nysa App/Pods-Nysa App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nysa App/Pods-Nysa App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nysa App/Pods-Nysa App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC61603927788DDF00093443 /* Sources */ = {
@@ -372,6 +441,7 @@
 		};
 		BC61605227788DE100093443 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01F75EB6678DDBF523DCC90C /* Pods-Nysa App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,6 +470,7 @@
 		};
 		BC61605327788DE100093443 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB317EC242F8705A1DAB589 /* Pods-Nysa App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
