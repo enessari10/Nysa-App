@@ -17,34 +17,27 @@ class ConverterViewController: UIViewController{
     @IBOutlet weak var fromMoneyLabel: UILabel!
     @IBOutlet weak var pickerViewButton: UIButton!
     
-    var converterModel : [ConverterModel] = []
+    var converterModelData : [ConverterModel] = []
     var converterAPI = ConverterAPI()
-    var pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
     var screenWidth = UIScreen.main.bounds.width - 10
     var screenHeight = UIScreen.main.bounds.height / 2
     var selectedRow = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.isHidden = true
-        showData()
+        showCurrencySymbols()
     }
-    func showData(){
+    func showCurrencySymbols(){
         DispatchQueue.main.async {
-            AF.request(self.converterAPI.converterSymbols+self.converterAPI.token).responseJSON{ response in
+            AF.request(self.converterAPI.converterSymbols+self.converterAPI.token+self.converterAPI.converterType).responseJSON{ response in
                 
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
-                    let data = json["symbols"]
-                    print(data.count)
-                    
-                    json["symbols"].stringValue.forEach({(news) in
-                        print(news)
+                    json.array?.forEach({(news) in
+                        let news = ConverterModel(title: news["Currency"].stringValue)
+                        self.converterModelData.append(news)
                     })
-                                                   
-                                                   
-                    print(self.pickerData.count)
-                    
                 case .failure(let error):
                     print(error)
                     let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
@@ -76,7 +69,7 @@ class ConverterViewController: UIViewController{
         
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler : { (UIAlertAction) in
             self.selectedRow = pickerView.selectedRow(inComponent: 0)
-            self.toMoneyLabel.text = self.pickerData[self.selectedRow]
+            self.toMoneyLabel.text = self.converterModelData[self.selectedRow].title
         }))
         self.present(alert,animated: true,completion: nil)
     }
@@ -101,29 +94,52 @@ class ConverterViewController: UIViewController{
         
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler : { (UIAlertAction) in
             self.selectedRow = pickerView.selectedRow(inComponent: 0)
-            self.fromMoneyLabel.text = self.pickerData[self.selectedRow]
+            self.fromMoneyLabel.text = self.converterModelData[self.selectedRow].title
         }))
         self.present(alert,animated: true,completion: nil)
     }
     @IBAction func convertPressedButton(_ sender: Any) {
+        let url = converterAPI.getExchange(from: self.fromMoneyLabel.text!, to: self.toMoneyLabel.text!, amount: self.amountTextfield.text!)
+        
+        print(url)
+        /*DispatchQueue.main.async {
+           
+            AF.request(url).responseJSON{ response in
+                
+                switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                    json.array?.forEach({(news) in
+                        let news = ConverterModel(title: news["Currency"].stringValue)
+                        self.converterModelData.append(news)
+                    })
+                case .failure(let error):
+                    print(error)
+                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            
+        }*/
         
     }
     
 }
 extension ConverterViewController :UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return self.converterModelData.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return converterModelData[row].title
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
-        label.text = pickerData[row]
+        label.text = converterModelData[row].title
         label.sizeToFit()
         return label
     }
