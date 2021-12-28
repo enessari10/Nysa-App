@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
 
 struct NewspaperModel{
@@ -17,4 +15,4 @@ struct NewspaperModel{
     var link : String
 }
                    
-                   
+              

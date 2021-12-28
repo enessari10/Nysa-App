@@ -206,6 +206,122 @@
                                             <outlet property="newspaperCollectionView" destination="eFT-Fj-8Od" id="4go-qO-GNK"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exchangeCell" rowHeight="200" id="gYl-Wv-5qy" customClass="ExchangeTableViewCell" customModule="Nysa_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="444.66666603088379" width="428" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gYl-Wv-5qy" id="Ndy-hm-fhk">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaperBG" translatesAutoresizingMaskIntoConstraints="NO" id="Csf-8K-DTR">
+                                                    <rect key="frame" x="0.0" y="30" width="428" height="170"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="428" id="HLF-sI-cwY"/>
+                                                        <constraint firstAttribute="height" constant="170" id="eDK-dK-kVB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uts-zK-aTd">
+                                                    <rect key="frame" x="20" y="36" width="408" height="164"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="164" id="0EH-5k-Vpl"/>
+                                                        <constraint firstAttribute="width" constant="408" id="9E3-2l-UC0"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Akk-BS-mEC">
+                                                        <size key="itemSize" width="113" height="250"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="exchangeCollectionCell" id="4VQ-jq-HPE" customClass="ExchangeCollectionViewCell" customModule="Nysa_App" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="29.666666666666668" width="113" height="105"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CwA-Bn-sRM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="113" height="105"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryBG" translatesAutoresizingMaskIntoConstraints="NO" id="ghZ-tM-yVC">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="113" height="105"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="113" id="gOD-D1-j2Z"/>
+                                                                            <constraint firstAttribute="height" constant="105" id="mx7-PE-yCG"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sportImages" translatesAutoresizingMaskIntoConstraints="NO" id="sMU-wd-rP0">
+                                                                        <rect key="frame" x="7" y="14" width="99" height="46"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="100" id="Bjz-uE-onn"/>
+                                                                            <constraint firstAttribute="height" constant="47" id="OH9-SB-W5V"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxShowImage" translatesAutoresizingMaskIntoConstraints="NO" id="hep-qo-VHt">
+                                                                        <rect key="frame" x="0.0" y="64" width="113" height="41"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="41" id="0ko-Yg-W0h"/>
+                                                                            <constraint firstAttribute="width" constant="113" id="f6V-D0-RfR"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJL-bQ-alD">
+                                                                        <rect key="frame" x="15" y="77" width="83" height="15"/>
+                                                                        <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="hep-qo-VHt" firstAttribute="leading" secondItem="CwA-Bn-sRM" secondAttribute="leading" id="0Gr-88-3ps"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="IJL-bQ-alD" secondAttribute="bottom" constant="13" id="1xU-c5-xkn"/>
+                                                                    <constraint firstItem="sMU-wd-rP0" firstAttribute="leading" secondItem="CwA-Bn-sRM" secondAttribute="leading" constant="7" id="3sB-eR-94y"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="IJL-bQ-alD" secondAttribute="trailing" constant="15" id="5bp-aZ-6iF"/>
+                                                                    <constraint firstItem="sMU-wd-rP0" firstAttribute="top" secondItem="CwA-Bn-sRM" secondAttribute="top" constant="14" id="8Ge-4t-5Mx"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ghZ-tM-yVC" secondAttribute="bottom" id="A9n-TQ-dI4"/>
+                                                                    <constraint firstItem="IJL-bQ-alD" firstAttribute="top" secondItem="sMU-wd-rP0" secondAttribute="bottom" constant="17" id="ElV-Ac-tYU"/>
+                                                                    <constraint firstItem="IJL-bQ-alD" firstAttribute="leading" secondItem="CwA-Bn-sRM" secondAttribute="leading" constant="15" id="IEk-Ug-UGf"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="hep-qo-VHt" secondAttribute="bottom" id="Ler-MZ-UmF"/>
+                                                                    <constraint firstItem="hep-qo-VHt" firstAttribute="top" secondItem="sMU-wd-rP0" secondAttribute="bottom" constant="4" id="X9P-cx-5oj"/>
+                                                                    <constraint firstItem="ghZ-tM-yVC" firstAttribute="leading" secondItem="CwA-Bn-sRM" secondAttribute="leading" id="cTr-TG-daB"/>
+                                                                    <constraint firstItem="ghZ-tM-yVC" firstAttribute="top" secondItem="CwA-Bn-sRM" secondAttribute="top" id="ml1-r0-B9b"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="hep-qo-VHt" secondAttribute="trailing" id="nNb-ib-hGP"/>
+                                                                    <constraint firstItem="hep-qo-VHt" firstAttribute="top" secondItem="sMU-wd-rP0" secondAttribute="bottom" constant="4" id="nR6-HD-dAQ"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ghZ-tM-yVC" secondAttribute="trailing" id="pN5-kn-0Co"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="sMU-wd-rP0" secondAttribute="trailing" constant="7" id="rMq-2o-4oI"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="113" height="105"/>
+                                                            <connections>
+                                                                <outlet property="exchangeImage" destination="sMU-wd-rP0" id="hkS-3h-eEr"/>
+                                                                <outlet property="exchangeLabel" destination="IJL-bQ-alD" id="0ep-Kw-Sqa"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newspaper Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-ho-2W3">
+                                                    <rect key="frame" x="20" y="10" width="179" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="179" id="Xtm-HU-psH"/>
+                                                        <constraint firstAttribute="height" constant="15" id="cVb-Dk-zu6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Csf-8K-DTR" firstAttribute="trailing" secondItem="Uts-zK-aTd" secondAttribute="trailing" id="5HH-fN-y12"/>
+                                                <constraint firstAttribute="trailing" secondItem="jSx-ho-2W3" secondAttribute="trailing" constant="229" id="8xL-xq-lr4"/>
+                                                <constraint firstItem="jSx-ho-2W3" firstAttribute="top" secondItem="Ndy-hm-fhk" secondAttribute="top" constant="10" id="Q0M-x1-SkV"/>
+                                                <constraint firstAttribute="bottom" secondItem="Csf-8K-DTR" secondAttribute="bottom" id="Tat-16-g4s"/>
+                                                <constraint firstItem="Csf-8K-DTR" firstAttribute="bottom" secondItem="Uts-zK-aTd" secondAttribute="bottom" id="b25-Sb-zYn"/>
+                                                <constraint firstItem="Csf-8K-DTR" firstAttribute="leading" secondItem="Ndy-hm-fhk" secondAttribute="leading" id="gGk-wU-HtJ"/>
+                                                <constraint firstItem="jSx-ho-2W3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ndy-hm-fhk" secondAttribute="leading" constant="20" symbolic="YES" id="yFL-Wn-8jk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exchangeCollection" destination="Uts-zK-aTd" id="gC3-DJ-Les"/>
+                                            <outlet property="exchangeLabel" destination="jSx-ho-2W3" id="yof-dZ-9H1"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
