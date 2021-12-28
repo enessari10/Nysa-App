@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ConverterViewController: UIViewController{
     
@@ -24,9 +26,35 @@ class ConverterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.isHidden = true
-      
+        showData()
     }
-    
+    func showData(){
+        DispatchQueue.main.async {
+            AF.request(self.converterAPI.converterSymbols+self.converterAPI.token).responseJSON{ response in
+                
+                switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                    let data = json["symbols"]
+                    print(data.count)
+                    
+                    json["symbols"].stringValue.forEach({(news) in
+                        print(news)
+                    })
+                                                   
+                                                   
+                    print(self.pickerData.count)
+                    
+                case .failure(let error):
+                    print(error)
+                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            
+        }
+    }
     @IBAction func toMoneyButtonPressed(_ sender: Any) {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)

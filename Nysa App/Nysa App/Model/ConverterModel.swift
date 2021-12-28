@@ -8,7 +8,5 @@
 import Foundation
 
 struct ConverterModel{
-    var amount : Int
-    var to : String
-    var from : String
+    var title : String
 }
