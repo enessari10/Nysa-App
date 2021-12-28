@@ -15,7 +15,7 @@ import SafariServices
 class NewspaperViewController: UIViewController {
     
     @IBOutlet var newsTableView: UITableView!
-    @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet var animationView: AnimationView!
     
     var newspaperData : [NewspaperModel] = []
     var newsAPI = NewspaperAPI()
@@ -28,6 +28,7 @@ class NewspaperViewController: UIViewController {
         self.newsTableView.dataSource = self
         
     }
+    
     func showData(){
         animationStart()
         DispatchQueue.main.async {
@@ -100,13 +101,10 @@ extension NewspaperViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var myUrl = newspaperData[indexPath.row].link
-        if myUrl == nil{
-            myUrl = "https://www.google.com.tr"
-        } else {
-            let vc = SFSafariViewController(url: URL(string: myUrl)!)
-            present(vc,animated: true)
-        }
+        let myUrl = newspaperData[indexPath.row].link
+        let vc = SFSafariViewController(url: URL(string: myUrl)!)
+        present(vc,animated: true)
+        
         
     }
     

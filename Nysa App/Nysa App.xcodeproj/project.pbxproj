@@ -18,6 +18,9 @@
 		BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */; };
 		BC6EE41B2779F69100306EE3 /* NewspaperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */; };
 		BC6EE41F277A38B400306EE3 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = BC6EE41E277A38B400306EE3 /* loading.json */; };
+		BC6EE425277B1ADB00306EE3 /* ConverterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE424277B1ADB00306EE3 /* ConverterAPI.swift */; };
+		BC6EE427277B1C0C00306EE3 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */; };
+		BC6EE429277B214100306EE3 /* ConverterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6EE428277B214100306EE3 /* ConverterModel.swift */; };
 		BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */; };
 		BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */; };
 		BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */; };
@@ -43,6 +46,9 @@
 		BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperModel.swift; sourceTree = "<group>"; };
 		BC6EE41E277A38B400306EE3 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		BC6EE424277B1ADB00306EE3 /* ConverterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterAPI.swift; sourceTree = "<group>"; };
+		BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		BC6EE428277B214100306EE3 /* ConverterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterModel.swift; sourceTree = "<group>"; };
 		BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Light Az.otf"; sourceTree = "<group>"; };
 		BCC570312779CC3100E42DD8 /* Sofia Pro Bold Az.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sofia Pro Bold Az.otf"; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 			children = (
 				BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */,
 				BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */,
+				BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */,
+				BC6EE424277B1ADB00306EE3 /* ConverterAPI.swift */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */,
+				BC6EE428277B214100306EE3 /* ConverterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +326,9 @@
 				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,
 				BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */,
 				BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */,
+				BC6EE425277B1ADB00306EE3 /* ConverterAPI.swift in Sources */,
+				BC6EE427277B1C0C00306EE3 /* ConverterViewController.swift in Sources */,
+				BC6EE429277B214100306EE3 /* ConverterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
