@@ -30,6 +30,10 @@
 		BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */; };
 		BCF3B22F27832B800048F21A /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B22E27832B800048F21A /* CoinTableViewCell.swift */; };
 		BCF3B23127832D160048F21A /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B23027832D160048F21A /* CoinsViewController.swift */; };
+		BCF3B23327832FDD0048F21A /* CoinsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B23227832FDD0048F21A /* CoinsAPI.swift */; };
+		BCF3B235278330230048F21A /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B234278330230048F21A /* CoinsModel.swift */; };
+		BCF3B2372783418D0048F21A /* loading2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCF3B2362783418D0048F21A /* loading2.json */; };
+		BCF3B2392783434B0048F21A /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B2382783434B0048F21A /* WeatherAPI.swift */; };
 		F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */; };
 		F41E5BEA277B5D23004C4AAE /* ExchangeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,10 @@
 		BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF3B22E27832B800048F21A /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 		BCF3B23027832D160048F21A /* CoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
+		BCF3B23227832FDD0048F21A /* CoinsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsAPI.swift; sourceTree = "<group>"; };
+		BCF3B234278330230048F21A /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
+		BCF3B2362783418D0048F21A /* loading2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading2.json; sourceTree = "<group>"; };
+		BCF3B2382783434B0048F21A /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewCell.swift; sourceTree = "<group>"; };
 		F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +173,8 @@
 			children = (
 				BC6EE4142779F13900306EE3 /* NewspaperAPI.swift */,
 				BC6EE424277B1ADB00306EE3 /* ConverterAPI.swift */,
+				BCF3B23227832FDD0048F21A /* CoinsAPI.swift */,
+				BCF3B2382783434B0048F21A /* WeatherAPI.swift */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -174,6 +184,7 @@
 			children = (
 				BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */,
 				BC6EE428277B214100306EE3 /* ConverterModel.swift */,
+				BCF3B234278330230048F21A /* CoinsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 		BC61605C2778917300093443 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				BCF3B2362783418D0048F21A /* loading2.json */,
 				BC6EE41E277A38B400306EE3 /* loading.json */,
 			);
 			path = Lottie;
@@ -274,6 +286,7 @@
 				BCC570392779DAFE00E42DD8 /* Sofia Pro Medium Az.otf in Resources */,
 				BC61604D27788DE100093443 /* LaunchScreen.storyboard in Resources */,
 				BC6EE41F277A38B400306EE3 /* loading.json in Resources */,
+				BCF3B2372783418D0048F21A /* loading2.json in Resources */,
 				BC61604A27788DE100093443 /* Assets.xcassets in Resources */,
 				BC61604827788DDF00093443 /* Main.storyboard in Resources */,
 			);
@@ -341,8 +354,11 @@
 				BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */,
 				F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */,
 				BC6EE425277B1ADB00306EE3 /* ConverterAPI.swift in Sources */,
+				BCF3B235278330230048F21A /* CoinsModel.swift in Sources */,
+				BCF3B23327832FDD0048F21A /* CoinsAPI.swift in Sources */,
 				BC6EE427277B1C0C00306EE3 /* ConverterViewController.swift in Sources */,
 				BCF3B22F27832B800048F21A /* CoinTableViewCell.swift in Sources */,
+				BCF3B2392783434B0048F21A /* WeatherAPI.swift in Sources */,
 				BC6EE429277B214100306EE3 /* ConverterModel.swift in Sources */,
 				BCF3B23127832D160048F21A /* CoinsViewController.swift in Sources */,
 			);

@@ -521,8 +521,23 @@
                     <view key="view" contentMode="scaleToFill" id="I14-cK-Ek4">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-tf-UMd">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="428" id="Qh6-4Q-AU9"/>
+                                    <constraint firstAttribute="height" constant="926" id="mct-O7-osZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jWA-yx-tnX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WnP-tf-UMd" secondAttribute="bottom" id="HIP-NL-7nj"/>
+                            <constraint firstItem="WnP-tf-UMd" firstAttribute="leading" secondItem="jWA-yx-tnX" secondAttribute="leading" id="jpE-77-P0k"/>
+                            <constraint firstItem="WnP-tf-UMd" firstAttribute="trailing" secondItem="jWA-yx-tnX" secondAttribute="trailing" id="qYq-Ni-xbs"/>
+                            <constraint firstItem="WnP-tf-UMd" firstAttribute="top" secondItem="I14-cK-Ek4" secondAttribute="top" id="uPd-4W-USl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.fill" catalog="system" id="hNa-re-qPo">
                         <color key="badgeColor" name="AccentColor"/>
@@ -530,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpo-SM-qiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-192" y="710"/>
+            <point key="canvasLocation" x="-192.05607476635512" y="709.50323974082073"/>
         </scene>
         <!--Converter-->
         <scene sceneID="n1u-hP-qhy">
@@ -681,7 +696,7 @@
                                 <rect key="frame" x="20" y="376" width="388" height="244"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-mi-45W">
-                                        <rect key="frame" x="37.000000000000007" y="15" width="125.66666666666669" height="141"/>
+                                        <rect key="frame" x="36.999999999999993" y="15" width="122.33333333333331" height="141"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="141" id="VR7-sM-niB"/>
                                         </constraints>
@@ -735,8 +750,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-BX-Q6b">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-BX-Q6b">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="coinCell" rowHeight="45" id="0B9-9Z-dWC" customClass="CoinTableViewCell" customModule="Nysa_App" customModuleProvider="target">
@@ -746,41 +762,60 @@
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-ZA-9Kd">
-                                                    <rect key="frame" x="20" y="11" width="146" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-ZA-9Kd">
+                                                    <rect key="frame" x="127" y="12.666666666666664" width="147" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-0o-6Ui">
-                                                    <rect key="frame" x="262" y="11" width="146" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-0o-6Ui">
+                                                    <rect key="frame" x="293" y="12.666666666666664" width="118" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="20"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51S-Xe-DXW">
+                                                    <rect key="frame" x="20" y="12.666666666666664" width="78" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="20"/>
+                                                    <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="og1-ZA-9Kd" firstAttribute="leading" secondItem="tRh-lq-hPY" secondAttribute="leading" constant="127" id="0MU-vM-3kB"/>
+                                                <constraint firstAttribute="trailing" secondItem="nv0-0o-6Ui" secondAttribute="trailing" constant="17" id="1yu-Hp-Nsi"/>
+                                                <constraint firstAttribute="trailing" secondItem="51S-Xe-DXW" secondAttribute="trailing" constant="330" id="CYM-a9-OI1"/>
+                                                <constraint firstItem="nv0-0o-6Ui" firstAttribute="leading" secondItem="tRh-lq-hPY" secondAttribute="leading" constant="293" id="H9o-EY-IJb"/>
+                                                <constraint firstItem="51S-Xe-DXW" firstAttribute="leading" secondItem="tRh-lq-hPY" secondAttribute="leading" constant="20" id="Y4g-Z0-7WR"/>
+                                                <constraint firstAttribute="trailing" secondItem="og1-ZA-9Kd" secondAttribute="trailing" constant="154" id="ZDP-5g-MiL"/>
+                                                <constraint firstItem="51S-Xe-DXW" firstAttribute="centerY" secondItem="tRh-lq-hPY" secondAttribute="centerY" id="byU-7O-bhm"/>
+                                                <constraint firstItem="51S-Xe-DXW" firstAttribute="firstBaseline" secondItem="nv0-0o-6Ui" secondAttribute="baseline" id="mww-Kp-a7L"/>
+                                                <constraint firstItem="51S-Xe-DXW" firstAttribute="firstBaseline" secondItem="og1-ZA-9Kd" secondAttribute="baseline" id="qXX-3j-IZJ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coinName" destination="og1-ZA-9Kd" id="zxj-rK-7LB"/>
                                             <outlet property="coinPrices" destination="nv0-0o-6Ui" id="dP2-m4-AhW"/>
+                                            <outlet property="coinShortName" destination="51S-Xe-DXW" id="Q36-3v-Cv7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" id="xEk-e4-wdx" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="307" width="428" height="278"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loading2"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wKL-Le-mC1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="I8X-BX-Q6b" secondAttribute="bottom" id="RZ4-Pn-LDJ"/>
-                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="top" secondItem="geE-nE-0y3" secondAttribute="top" id="XAI-mG-Qds"/>
-                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="leading" secondItem="wKL-Le-mC1" secondAttribute="leading" id="gBA-Bo-gKt"/>
-                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="trailing" secondItem="wKL-Le-mC1" secondAttribute="trailing" id="iLI-xa-j5s"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Coin" id="iGc-7m-wrK"/>
                     <connections>
+                        <outlet property="animationView" destination="xEk-e4-wdx" id="uls-k7-Ppm"/>
                         <outlet property="coinTableView" destination="I8X-BX-Q6b" id="mS2-iO-bBe"/>
                     </connections>
                 </viewController>
@@ -866,6 +901,7 @@
     <resources>
         <image name="404" width="333.33334350585938" height="333.33334350585938"/>
         <image name="banknote.fill" catalog="system" width="128" height="78"/>
+        <image name="bg" width="1080" height="2160"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="boxShowImage" width="80.666664123535156" height="25.333333969116211"/>
         <image name="buttonBG" width="376.66665649414062" height="57"/>
