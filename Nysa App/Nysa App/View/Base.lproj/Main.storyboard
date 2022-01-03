@@ -51,38 +51,40 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherImage" translatesAutoresizingMaskIntoConstraints="NO" id="mHy-vp-PXV">
                                                     <rect key="frame" x="0.0" y="0.0" width="182" height="200"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="178" id="2vN-kG-FoI"/>
-                                                        <constraint firstAttribute="width" constant="182" id="qq7-1g-dbs"/>
+                                                        <constraint firstAttribute="height" constant="200" id="5Ed-bi-Ccp"/>
+                                                        <constraint firstAttribute="width" constant="182" id="G90-sm-i3L"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Istanbul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzH-dO-TFT">
-                                                    <rect key="frame" x="190" y="20" width="218" height="50"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Istanbul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OzH-dO-TFT">
+                                                    <rect key="frame" x="245.66666666666666" y="20" width="112.33333333333334" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="cTN-WO-dr4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r18-Lp-lPr">
-                                                    <rect key="frame" x="232" y="70" width="176" height="120"/>
-                                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="70"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r18-Lp-lPr">
+                                                    <rect key="frame" x="222" y="65" width="159" height="95"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="95" id="d69-mk-Slt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="106"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="r18-Lp-lPr" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" constant="70" id="22H-t1-0HR"/>
-                                                <constraint firstAttribute="bottom" secondItem="r18-Lp-lPr" secondAttribute="bottom" constant="10" id="4IT-ST-6IE"/>
-                                                <constraint firstItem="OzH-dO-TFT" firstAttribute="leading" secondItem="mHy-vp-PXV" secondAttribute="trailing" constant="8" id="E25-6b-suH"/>
-                                                <constraint firstItem="OzH-dO-TFT" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" constant="20" id="GSE-VG-zJ7"/>
-                                                <constraint firstAttribute="trailing" secondItem="r18-Lp-lPr" secondAttribute="trailing" constant="20" id="Mu0-ff-NJu"/>
-                                                <constraint firstItem="r18-Lp-lPr" firstAttribute="leading" secondItem="mHy-vp-PXV" secondAttribute="trailing" constant="50" id="dpv-xG-KNL"/>
+                                                <constraint firstAttribute="trailing" secondItem="r18-Lp-lPr" secondAttribute="trailing" constant="47" id="AvH-GS-sTg"/>
+                                                <constraint firstItem="r18-Lp-lPr" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" constant="65" id="EP0-d7-Q9v"/>
+                                                <constraint firstAttribute="trailing" secondItem="OzH-dO-TFT" secondAttribute="trailing" constant="70" id="NLR-NC-m6S"/>
+                                                <constraint firstItem="OzH-dO-TFT" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" constant="20" id="OTz-UD-Fzl"/>
+                                                <constraint firstItem="mHy-vp-PXV" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" id="ewz-Ee-gK2"/>
+                                                <constraint firstItem="mHy-vp-PXV" firstAttribute="leading" secondItem="6tE-OQ-dAG" secondAttribute="leading" id="jMR-bv-QfW"/>
                                                 <constraint firstItem="BQy-HY-ISE" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" id="jjf-HR-bJ3"/>
                                                 <constraint firstAttribute="trailing" secondItem="BQy-HY-ISE" secondAttribute="trailing" id="nZS-ZD-8Q1"/>
-                                                <constraint firstItem="mHy-vp-PXV" firstAttribute="leading" secondItem="6tE-OQ-dAG" secondAttribute="leading" id="oZc-iN-bP5"/>
-                                                <constraint firstAttribute="bottom" secondItem="mHy-vp-PXV" secondAttribute="bottom" id="qF4-TY-6wb"/>
-                                                <constraint firstAttribute="bottom" secondItem="OzH-dO-TFT" secondAttribute="bottom" constant="130" id="rsb-ad-yFq"/>
-                                                <constraint firstItem="mHy-vp-PXV" firstAttribute="top" secondItem="6tE-OQ-dAG" secondAttribute="top" id="shi-Oh-Cpw"/>
                                                 <constraint firstAttribute="bottom" secondItem="BQy-HY-ISE" secondAttribute="bottom" id="slP-S0-KWc"/>
-                                                <constraint firstAttribute="trailing" secondItem="OzH-dO-TFT" secondAttribute="trailing" constant="20" id="uqc-ui-zCc"/>
+                                                <constraint firstItem="r18-Lp-lPr" firstAttribute="leading" secondItem="mHy-vp-PXV" secondAttribute="trailing" constant="40" id="uUV-gF-AeH"/>
                                                 <constraint firstItem="BQy-HY-ISE" firstAttribute="leading" secondItem="6tE-OQ-dAG" secondAttribute="leading" id="xec-5r-1R9"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -296,7 +298,7 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newspaper Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-ho-2W3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSx-ho-2W3">
                                                     <rect key="frame" x="20" y="10" width="179" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="179" id="Xtm-HU-psH"/>
@@ -384,7 +386,7 @@
                         <segue destination="65e-Oo-c5r" kind="relationship" relationship="viewControllers" id="jPZ-8g-8tw"/>
                         <segue destination="erf-eL-RTp" kind="relationship" relationship="viewControllers" id="2dc-IY-hm8"/>
                         <segue destination="6PN-Ku-rRH" kind="relationship" relationship="viewControllers" id="XNh-qg-6Pe"/>
-                        <segue destination="Ocj-z7-U6J" kind="relationship" relationship="viewControllers" id="XeU-1M-lqb"/>
+                        <segue destination="SjH-W3-5fO" kind="relationship" relationship="viewControllers" id="XeU-1M-lqb"/>
                         <segue destination="xCp-JT-tBg" kind="relationship" relationship="viewControllers" id="TKZ-r2-GGO"/>
                     </connections>
                 </tabBarController>
@@ -725,23 +727,66 @@
             </objects>
             <point key="canvasLocation" x="3308.4112149532707" y="709.50323974082073"/>
         </scene>
-        <!--Coins-->
+        <!--Coin-->
         <scene sceneID="RDj-Wt-1jT">
             <objects>
-                <viewController id="Ocj-z7-U6J" sceneMemberID="viewController">
+                <viewController id="Ocj-z7-U6J" customClass="CoinsViewController" customModule="Nysa_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="geE-nE-0y3">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-BX-Q6b">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="coinCell" rowHeight="45" id="0B9-9Z-dWC" customClass="CoinTableViewCell" customModule="Nysa_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0B9-9Z-dWC" id="tRh-lq-hPY">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og1-ZA-9Kd">
+                                                    <rect key="frame" x="20" y="11" width="146" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nv0-0o-6Ui">
+                                                    <rect key="frame" x="262" y="11" width="146" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coinName" destination="og1-ZA-9Kd" id="zxj-rK-7LB"/>
+                                            <outlet property="coinPrices" destination="nv0-0o-6Ui" id="dP2-m4-AhW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wKL-Le-mC1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="I8X-BX-Q6b" secondAttribute="bottom" id="RZ4-Pn-LDJ"/>
+                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="top" secondItem="geE-nE-0y3" secondAttribute="top" id="XAI-mG-Qds"/>
+                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="leading" secondItem="wKL-Le-mC1" secondAttribute="leading" id="gBA-Bo-gKt"/>
+                            <constraint firstItem="I8X-BX-Q6b" firstAttribute="trailing" secondItem="wKL-Le-mC1" secondAttribute="trailing" id="iLI-xa-j5s"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Coins" image="bitcoinsign.circle.fill" catalog="system" id="3oN-Wr-Ulw">
-                        <color key="badgeColor" name="AccentColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Coin" id="iGc-7m-wrK"/>
+                    <connections>
+                        <outlet property="coinTableView" destination="I8X-BX-Q6b" id="mS2-iO-bBe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWO-yd-X0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4171.9626168224295" y="709.50323974082073"/>
+            <point key="canvasLocation" x="5071.9626168224295" y="709.50323974082073"/>
         </scene>
         <!--Newspaper-->
         <scene sceneID="Agz-Yp-NVp">
@@ -794,6 +839,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ifl-s8-EAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2408.4112149532707" y="709.50323974082073"/>
+        </scene>
+        <!--Coins-->
+        <scene sceneID="dyj-je-blH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SjH-W3-5fO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Coins" image="bitcoinsign.circle.fill" catalog="system" id="3oN-Wr-Ulw">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kig-EK-xcf">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ocj-z7-U6J" kind="relationship" relationship="rootViewController" id="aGh-41-bPi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7at-Yu-P4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4171.9626168224295" y="709.50323974082073"/>
         </scene>
     </scenes>
     <resources>

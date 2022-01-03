@@ -28,6 +28,8 @@
 		BCC570382779DAFE00E42DD8 /* Sofia Pro Light Az.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCC570302779CC3100E42DD8 /* Sofia Pro Light Az.otf */; };
 		BCC570392779DAFE00E42DD8 /* Sofia Pro Medium Az.otf in Resources */ = {isa = PBXBuildFile; fileRef = BCC570322779CC3100E42DD8 /* Sofia Pro Medium Az.otf */; };
 		BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */; };
+		BCF3B22F27832B800048F21A /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B22E27832B800048F21A /* CoinTableViewCell.swift */; };
+		BCF3B23127832D160048F21A /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B23027832D160048F21A /* CoinsViewController.swift */; };
 		F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */; };
 		F41E5BEA277B5D23004C4AAE /* ExchangeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		BCC570332779CE6E00E42DD8 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		BCC570352779CEA100E42DD8 /* NewspaperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperTableViewCell.swift; sourceTree = "<group>"; };
 		BCC5703A2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCF3B22E27832B800048F21A /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		BCF3B23027832D160048F21A /* CoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
 		F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewCell.swift; sourceTree = "<group>"; };
 		F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +145,7 @@
 				BCC5702E2779C79E00E42DD8 /* HomeViewController.swift */,
 				BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */,
 				BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */,
+				BCF3B23027832D160048F21A /* CoinsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				BC6EE4182779F59500306EE3 /* NewsTableViewCell.swift */,
 				F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */,
 				F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */,
+				BCF3B22E27832B800048F21A /* CoinTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,7 +342,9 @@
 				F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */,
 				BC6EE425277B1ADB00306EE3 /* ConverterAPI.swift in Sources */,
 				BC6EE427277B1C0C00306EE3 /* ConverterViewController.swift in Sources */,
+				BCF3B22F27832B800048F21A /* CoinTableViewCell.swift in Sources */,
 				BC6EE429277B214100306EE3 /* ConverterModel.swift in Sources */,
+				BCF3B23127832D160048F21A /* CoinsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

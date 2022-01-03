@@ -88,6 +88,7 @@ extension NewspaperViewController : UITableViewDelegate, UITableViewDataSource{
         cell.newsHead.text = newspaperData[indexPath.row].title
         cell.newsDesc.text = newspaperData[indexPath.row].desc
         let urlImage = newspaperData[indexPath.row].image
+        
         if urlImage == "null"{
             cell.newsImageView.image = UIImage(named: "404")
         }else{
