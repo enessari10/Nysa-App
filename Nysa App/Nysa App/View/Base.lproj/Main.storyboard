@@ -13,6 +13,9 @@
         <array key="Sofia Pro Bold Az.otf">
             <string>SofiaPro-Bold</string>
         </array>
+        <array key="Sofia Pro Light Az.otf">
+            <string>SofiaPro-Light</string>
+        </array>
         <array key="Sofia Pro Medium Az.otf">
             <string>SofiaPro-Medium</string>
         </array>
@@ -517,31 +520,93 @@
         <!--Weather-->
         <scene sceneID="b93-lD-vtj">
             <objects>
-                <viewController id="xCp-JT-tBg" sceneMemberID="viewController">
+                <viewController id="xCp-JT-tBg" customClass="WeatherViewController" customModule="Nysa_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I14-cK-Ek4">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WnP-tf-UMd">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="843"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="428" id="Qh6-4Q-AU9"/>
-                                    <constraint firstAttribute="height" constant="926" id="mct-O7-osZ"/>
+                                    <constraint firstAttribute="height" constant="843" id="mct-O7-osZ"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUN-q5-whK">
+                                <rect key="frame" x="20" y="74" width="388" height="405"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-ds-BRk">
+                                        <rect key="frame" x="25" y="30" width="338" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="zpL-Pb-WSW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="35"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-Al-4Ao">
+                                        <rect key="frame" x="25" y="89" width="338" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="f3J-Md-wox"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SofiaPro-Medium" family="Sofia Pro" pointSize="25"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2g-19-zMW">
+                                        <rect key="frame" x="25" y="137" width="338" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SofiaPro-Light" family="Sofia Pro" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-6a-ELc">
+                                        <rect key="frame" x="195" y="137" width="174" height="149"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="149" id="fKE-yT-lb2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="90"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="OsL-ds-BRk" firstAttribute="top" secondItem="qUN-q5-whK" secondAttribute="top" constant="30" id="62B-iQ-xcL"/>
+                                    <constraint firstItem="OsL-ds-BRk" firstAttribute="leading" secondItem="qUN-q5-whK" secondAttribute="leading" constant="25" id="71g-Nb-hH5"/>
+                                    <constraint firstItem="L5a-Al-4Ao" firstAttribute="top" secondItem="OsL-ds-BRk" secondAttribute="bottom" constant="8" id="Brg-Nt-mf9"/>
+                                    <constraint firstAttribute="trailing" secondItem="OsL-ds-BRk" secondAttribute="trailing" constant="25" id="Qc4-Bb-hp0"/>
+                                    <constraint firstAttribute="trailing" secondItem="L5a-Al-4Ao" secondAttribute="trailing" constant="25" id="WFX-kn-NBW"/>
+                                    <constraint firstAttribute="trailing" secondItem="wVe-6a-ELc" secondAttribute="trailing" constant="19" id="XiB-C0-lB6"/>
+                                    <constraint firstAttribute="width" constant="388" id="aIZ-os-0cz"/>
+                                    <constraint firstAttribute="height" constant="405" id="afl-2S-WgO"/>
+                                    <constraint firstItem="wVe-6a-ELc" firstAttribute="leading" secondItem="qUN-q5-whK" secondAttribute="leading" constant="195" id="bhv-6j-FFV"/>
+                                    <constraint firstItem="wVe-6a-ELc" firstAttribute="top" secondItem="OsL-ds-BRk" secondAttribute="bottom" constant="56" id="odE-cU-nJx"/>
+                                    <constraint firstItem="L5a-Al-4Ao" firstAttribute="leading" secondItem="qUN-q5-whK" secondAttribute="leading" constant="25" id="v1W-ry-Edr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jWA-yx-tnX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WnP-tf-UMd" secondAttribute="bottom" id="HIP-NL-7nj"/>
+                            <constraint firstAttribute="bottom" secondItem="WnP-tf-UMd" secondAttribute="bottom" constant="83" id="HIP-NL-7nj"/>
+                            <constraint firstItem="jWA-yx-tnX" firstAttribute="trailing" secondItem="qUN-q5-whK" secondAttribute="trailing" constant="20" id="JEE-kn-NYb"/>
+                            <constraint firstItem="qUN-q5-whK" firstAttribute="top" secondItem="jWA-yx-tnX" secondAttribute="top" constant="30" id="dv5-Iu-tdi"/>
                             <constraint firstItem="WnP-tf-UMd" firstAttribute="leading" secondItem="jWA-yx-tnX" secondAttribute="leading" id="jpE-77-P0k"/>
                             <constraint firstItem="WnP-tf-UMd" firstAttribute="trailing" secondItem="jWA-yx-tnX" secondAttribute="trailing" id="qYq-Ni-xbs"/>
                             <constraint firstItem="WnP-tf-UMd" firstAttribute="top" secondItem="I14-cK-Ek4" secondAttribute="top" id="uPd-4W-USl"/>
+                            <constraint firstItem="qUN-q5-whK" firstAttribute="leading" secondItem="jWA-yx-tnX" secondAttribute="leading" constant="20" id="xz7-1G-QEt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun.fill" catalog="system" id="hNa-re-qPo">
                         <color key="badgeColor" name="AccentColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="cityName" destination="OsL-ds-BRk" id="sI9-wV-9nX"/>
+                        <outlet property="descLabel" destination="j2g-19-zMW" id="VbW-5v-Lik"/>
+                        <outlet property="mainLabel" destination="L5a-Al-4Ao" id="Y7k-TZ-F71"/>
+                        <outlet property="tempLabel" destination="wVe-6a-ELc" id="yjx-fE-Yte"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpo-SM-qiN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,7 +761,7 @@
                                 <rect key="frame" x="20" y="376" width="388" height="244"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-mi-45W">
-                                        <rect key="frame" x="36.999999999999993" y="15" width="122.33333333333331" height="141"/>
+                                        <rect key="frame" x="37.000000000000007" y="15" width="125.66666666666669" height="141"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="141" id="VR7-sM-niB"/>
                                         </constraints>

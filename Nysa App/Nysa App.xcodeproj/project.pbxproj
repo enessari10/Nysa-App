@@ -34,6 +34,8 @@
 		BCF3B235278330230048F21A /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B234278330230048F21A /* CoinsModel.swift */; };
 		BCF3B2372783418D0048F21A /* loading2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCF3B2362783418D0048F21A /* loading2.json */; };
 		BCF3B2392783434B0048F21A /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B2382783434B0048F21A /* WeatherAPI.swift */; };
+		BCF3B23B27838A040048F21A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B23A27838A040048F21A /* WeatherViewController.swift */; };
+		BCF3B23F278394C30048F21A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF3B23E278394C30048F21A /* WeatherModel.swift */; };
 		F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */; };
 		F41E5BEA277B5D23004C4AAE /* ExchangeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		BCF3B234278330230048F21A /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
 		BCF3B2362783418D0048F21A /* loading2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading2.json; sourceTree = "<group>"; };
 		BCF3B2382783434B0048F21A /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		BCF3B23A27838A040048F21A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		BCF3B23E278394C30048F21A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F41E5BE7277B5BD9004C4AAE /* ExchangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewCell.swift; sourceTree = "<group>"; };
 		F41E5BE9277B5D23004C4AAE /* ExchangeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,7 @@
 				BC6EE4162779F37900306EE3 /* NewspaperViewController.swift */,
 				BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */,
 				BCF3B23027832D160048F21A /* CoinsViewController.swift */,
+				BCF3B23A27838A040048F21A /* WeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				BC6EE41A2779F69100306EE3 /* NewspaperModel.swift */,
 				BC6EE428277B214100306EE3 /* ConverterModel.swift */,
 				BCF3B234278330230048F21A /* CoinsModel.swift */,
+				BCF3B23E278394C30048F21A /* WeatherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,11 +351,13 @@
 				BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */,
 				BC61604127788DDF00093443 /* AppDelegate.swift in Sources */,
 				BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */,
+				BCF3B23B27838A040048F21A /* WeatherViewController.swift in Sources */,
 				BC6EE41B2779F69100306EE3 /* NewspaperModel.swift in Sources */,
 				F41E5BEA277B5D23004C4AAE /* ExchangeCollectionViewCell.swift in Sources */,
 				BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */,
 				BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */,
 				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,
+				BCF3B23F278394C30048F21A /* WeatherModel.swift in Sources */,
 				BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */,
 				BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */,
 				F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */,
