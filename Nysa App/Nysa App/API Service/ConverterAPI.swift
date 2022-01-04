@@ -11,11 +11,12 @@ class ConverterAPI{
     let token = "61cb526f283c87.16166053"
     let converterSymbols = "https://eodhistoricaldata.com/api/exchanges-list/?api_token="
     let converterType = "&fmt=json"
-    let convertURL = "https://api.exchangeratesapi.io/v1/convert?access_key="
-    let secondToken = "3f02fe0c54b33b2d45bbb4af9f9abdf8"
+    let convertURL = "https://v6.exchangerate-api.com/v6/"
+    let secondToken = "2776f7792a09635a9e7f4c39"
     
     func getExchange(from: String, to:String, amount: String)-> String{
-        return convertURL + secondToken +  "&" + from + "&" + to + "&" + amount
+        return convertURL + secondToken +  "/pair/" + from + "/" + to + "/" + amount
     }
-
+    
+   
 }

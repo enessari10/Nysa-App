@@ -48,6 +48,8 @@ class ConverterViewController: UIViewController{
             
         }
     }
+    
+    
     @IBAction func toMoneyButtonPressed(_ sender: Any) {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
@@ -99,31 +101,29 @@ class ConverterViewController: UIViewController{
         self.present(alert,animated: true,completion: nil)
     }
     @IBAction func convertPressedButton(_ sender: Any) {
-        let url = converterAPI.getExchange(from: self.fromMoneyLabel.text!, to: self.toMoneyLabel.text!, amount: self.amountTextfield.text!)
-        
-        print(url)
-        /*DispatchQueue.main.async {
-           
-            AF.request(url).responseJSON{ response in
-                
-                switch response.result{
-                case .success(let value):
-                    let json = JSON(value)
-                    json.array?.forEach({(news) in
-                        let news = ConverterModel(title: news["Currency"].stringValue)
-                        self.converterModelData.append(news)
-                    })
-                case .failure(let error):
-                    print(error)
-                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+       
+            DispatchQueue.main.async {
+                AF.request(self.converterAPI.getExchange(from: self.toMoneyLabel.text!, to: self.fromMoneyLabel.text!, amount: self.amountTextfield.text!)).responseJSON{ response in
+                    
+                    switch response.result{
+                    case .success(let value):
+                        let json = JSON(value)
+                        print(json)
+                        print(json["conversion_result"].stringValue)
+                        self.resultLabel.isHidden = false
+                        self.resultLabel.text = json["conversion_result"].stringValue
+                    case .failure(let error):
+                        print(error)
+                        let alert = UIAlertController(title: "Error", message: "Convert API Error", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
+                
             }
-            
-        }*/
+        }
         
-    }
+    
     
 }
 extension ConverterViewController :UIPickerViewDelegate, UIPickerViewDataSource{

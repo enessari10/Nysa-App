@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5V-Zm-Que" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.8878504672896" y="-17.494600431965445"/>
+            <point key="canvasLocation" x="4172" y="-17"/>
         </scene>
         <!--Home-->
         <scene sceneID="V4l-vs-tBR">
@@ -373,7 +373,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQs-WC-tYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="-17"/>
+            <point key="canvasLocation" x="2407" y="-17"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jIi-HM-aBU">
@@ -395,7 +395,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szk-5m-ki5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="-17"/>
+            <point key="canvasLocation" x="980" y="-17"/>
         </scene>
         <!--Newspaper-->
         <scene sceneID="Wdk-QS-ixi">
@@ -630,7 +630,7 @@
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount typing..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-fv-A0y">
-                                        <rect key="frame" x="13" y="19" width="360" height="34"/>
+                                        <rect key="frame" x="19" y="19" width="354" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="7Mm-pq-POz"/>
                                         </constraints>
@@ -696,7 +696,7 @@
                                     <constraint firstAttribute="height" constant="207" id="ATC-R4-Q06"/>
                                     <constraint firstAttribute="trailing" secondItem="XZ8-Sp-h5r" secondAttribute="trailing" constant="15" id="AuC-fS-pLU"/>
                                     <constraint firstAttribute="trailing" secondItem="Gag-fP-3cQ" secondAttribute="trailing" constant="15" id="EP3-SZ-B6c"/>
-                                    <constraint firstItem="wBt-fv-A0y" firstAttribute="leading" secondItem="7To-vY-vDL" secondAttribute="leading" constant="13" id="ESf-2p-hi7"/>
+                                    <constraint firstItem="wBt-fv-A0y" firstAttribute="leading" secondItem="7To-vY-vDL" secondAttribute="leading" constant="19" id="ESf-2p-hi7"/>
                                     <constraint firstItem="LxT-76-DCj" firstAttribute="top" secondItem="7To-vY-vDL" secondAttribute="top" constant="8" id="R88-v6-d8P"/>
                                     <constraint firstItem="Gag-fP-3cQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="g3H-bJ-p0R" secondAttribute="trailing" constant="8" symbolic="YES" id="U5E-vi-iVS"/>
                                     <constraint firstItem="bC9-VK-8a6" firstAttribute="trailing" secondItem="TkO-KF-PEH" secondAttribute="trailing" id="UFY-19-AZf"/>
@@ -760,8 +760,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlh-ps-1ok">
                                 <rect key="frame" x="20" y="376" width="388" height="244"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-mi-45W">
-                                        <rect key="frame" x="37.000000000000007" y="15" width="125.66666666666669" height="141"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-mi-45W">
+                                        <rect key="frame" x="37" y="15" width="331" height="141"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="141" id="VR7-sM-niB"/>
                                         </constraints>
@@ -963,6 +963,9 @@
             <point key="canvasLocation" x="4171.9626168224295" y="709.50323974082073"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="xEk-e4-wdx"/>
+    </designables>
     <resources>
         <image name="404" width="333.33334350585938" height="333.33334350585938"/>
         <image name="banknote.fill" catalog="system" width="128" height="78"/>

@@ -23,6 +23,10 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cityName.isHidden = true
+        descLabel.isHidden = true
+        mainLabel.isHidden = true
+        tempLabel.isHidden = true
         setupLocationManager()
 
     }
@@ -31,10 +35,15 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
            locationManager.requestWhenInUseAuthorization()
            locationManager.startUpdatingLocation()
+        
        }
        
     
        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+           cityName.isHidden = false
+           descLabel.isHidden = false
+           mainLabel.isHidden = false
+           tempLabel.isHidden = false
            if let location = locations.last {
                if location.horizontalAccuracy > 0 {
                    locationManager.stopUpdatingLocation()
