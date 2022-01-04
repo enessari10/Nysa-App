@@ -12,34 +12,69 @@ import AlamofireImage
 import Lottie
 import SafariServices
 
+enum NewspaperPageState {
+    case search
+    case normal
+}
+
 class NewspaperViewController: UIViewController {
     
     @IBOutlet var newsTableView: UITableView!
     @IBOutlet var animationView: AnimationView!
+    var newspaperClass = NewspaperClass()
+    var state: NewspaperPageState = .normal
     
-    var newspaperData : [NewspaperModel] = []
-    var newsAPI = NewspaperAPI()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showData()
         self.newsTableView.delegate = self
         self.newsTableView.dataSource = self
-        
+        if state == .normal{
+            showData()
+        }else{
+            showSearchData()
+        }
     }
     
-    func showData(){
+    func showSearchData(){
         animationStart()
         DispatchQueue.main.async {
-            AF.request(self.newsAPI.newspaperURL+self.newsAPI.token+self.newsAPI.countryCode).responseJSON{ response in
+            AF.request(self.newspaperClass.searchNews(searchWord: self.newspaperClass.searchData)).responseJSON{ response in
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
                     let data = json["results"]
                     data.array?.forEach({(news) in
                         let news = NewspaperModel(title: news["title"].stringValue, desc: news["description"].stringValue, image: news["image_url"].stringValue, link: news["link"].stringValue)
-                        self.newspaperData.append(news)
+                        self.newspaperClass.newspaperData.append(news)
+                    })
+                    self.newsTableView.reloadData()
+                    self.animationStop()
+                    
+                case .failure(let error):
+                    print(error)
+                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            
+        }
+        
+        
+    }
+    func showData(){
+        animationStart()
+        DispatchQueue.main.async {
+            AF.request(self.newspaperClass.newspaperAPI.newspaperURL+self.newspaperClass.newspaperAPI.token+self.newspaperClass.newspaperAPI.countryCode).responseJSON{ response in
+                switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                    let data = json["results"]
+                    data.array?.forEach({(news) in
+                        let news = NewspaperModel(title: news["title"].stringValue, desc: news["description"].stringValue, image: news["image_url"].stringValue, link: news["link"].stringValue)
+                        self.newspaperClass.newspaperData.append(news)
                     })
                     self.newsTableView.reloadData()
                     self.animationStop()
@@ -77,7 +112,7 @@ class NewspaperViewController: UIViewController {
 
 extension NewspaperViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newspaperData.count
+        return newspaperClass.newspaperData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,9 +120,9 @@ extension NewspaperViewController : UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"newsCell", for: indexPath) as! NewsTableViewCell? else {
             fatalError()
         }
-        cell.newsHead.text = newspaperData[indexPath.row].title
-        cell.newsDesc.text = newspaperData[indexPath.row].desc
-        let urlImage = newspaperData[indexPath.row].image
+        cell.newsHead.text = newspaperClass.newspaperData[indexPath.row].title
+        cell.newsDesc.text = newspaperClass.newspaperData[indexPath.row].desc
+        let urlImage = newspaperClass.newspaperData[indexPath.row].image
         
         if urlImage == "null"{
             cell.newsImageView.image = UIImage(named: "404")
@@ -102,7 +137,7 @@ extension NewspaperViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let myUrl = newspaperData[indexPath.row].link
+        let myUrl = newspaperClass.newspaperData[indexPath.row].link
         let vc = SFSafariViewController(url: URL(string: myUrl)!)
         present(vc,animated: true)
         

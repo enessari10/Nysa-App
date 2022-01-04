@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		10FC6ACA97A99086D5C208D0 /* Pods_Nysa_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCDBD24630CE3923E55FBA1 /* Pods_Nysa_App.framework */; };
+		BC18492C2784D59B0031A3E5 /* NewspaperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18492B2784D59B0031A3E5 /* NewspaperClass.swift */; };
+		BC18492E2784D7010031A3E5 /* ConverterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18492D2784D7010031A3E5 /* ConverterClass.swift */; };
+		BC1849302784D80E0031A3E5 /* CoinsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18492F2784D80E0031A3E5 /* CoinsClass.swift */; };
+		BC1849322784D8DC0031A3E5 /* WeatherClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1849312784D8DC0031A3E5 /* WeatherClass.swift */; };
+		BC57815B2784E07E00B57D8F /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57815A2784E07E00B57D8F /* PermissionViewController.swift */; };
 		BC61604127788DDF00093443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604027788DDF00093443 /* AppDelegate.swift */; };
 		BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61604227788DDF00093443 /* SceneDelegate.swift */; };
 		BC61604827788DDF00093443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61604627788DDF00093443 /* Main.storyboard */; };
@@ -44,6 +49,11 @@
 		01F75EB6678DDBF523DCC90C /* Pods-Nysa App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nysa App.debug.xcconfig"; path = "Target Support Files/Pods-Nysa App/Pods-Nysa App.debug.xcconfig"; sourceTree = "<group>"; };
 		0CB317EC242F8705A1DAB589 /* Pods-Nysa App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nysa App.release.xcconfig"; path = "Target Support Files/Pods-Nysa App/Pods-Nysa App.release.xcconfig"; sourceTree = "<group>"; };
 		2DCDBD24630CE3923E55FBA1 /* Pods_Nysa_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nysa_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC18492B2784D59B0031A3E5 /* NewspaperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperClass.swift; sourceTree = "<group>"; };
+		BC18492D2784D7010031A3E5 /* ConverterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterClass.swift; sourceTree = "<group>"; };
+		BC18492F2784D80E0031A3E5 /* CoinsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsClass.swift; sourceTree = "<group>"; };
+		BC1849312784D8DC0031A3E5 /* WeatherClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClass.swift; sourceTree = "<group>"; };
+		BC57815A2784E07E00B57D8F /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		BC61603D27788DDF00093443 /* Nysa App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nysa App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61604027788DDF00093443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC61604227788DDF00093443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +117,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC18492A2784D5890031A3E5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BC18492B2784D59B0031A3E5 /* NewspaperClass.swift */,
+				BC18492D2784D7010031A3E5 /* ConverterClass.swift */,
+				BC18492F2784D80E0031A3E5 /* CoinsClass.swift */,
+				BC1849312784D8DC0031A3E5 /* WeatherClass.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		BC61603427788DDF00093443 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +155,7 @@
 				BC61605627788F1600093443 /* Controller */,
 				BC61605B27788F9A00093443 /* Cells */,
 				BC61605827788F2500093443 /* API Service */,
+				BC18492A2784D5890031A3E5 /* Class */,
 				BC61605727788F1D00093443 /* Fonts */,
 				BC61605C2778917300093443 /* Lottie */,
 				BC61604927788DE100093443 /* Assets.xcassets */,
@@ -159,6 +181,7 @@
 				BC6EE426277B1C0C00306EE3 /* ConverterViewController.swift */,
 				BCF3B23027832D160048F21A /* CoinsViewController.swift */,
 				BCF3B23A27838A040048F21A /* WeatherViewController.swift */,
+				BC57815A2784E07E00B57D8F /* PermissionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,23 +371,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCC570342779CE6F00E42DD8 /* WeatherTableViewCell.swift in Sources */,
+				BC57815B2784E07E00B57D8F /* PermissionViewController.swift in Sources */,
 				BCC570362779CEA100E42DD8 /* NewspaperTableViewCell.swift in Sources */,
 				BC61604127788DDF00093443 /* AppDelegate.swift in Sources */,
 				BC61604327788DDF00093443 /* SceneDelegate.swift in Sources */,
 				BCF3B23B27838A040048F21A /* WeatherViewController.swift in Sources */,
+				BC18492E2784D7010031A3E5 /* ConverterClass.swift in Sources */,
 				BC6EE41B2779F69100306EE3 /* NewspaperModel.swift in Sources */,
 				F41E5BEA277B5D23004C4AAE /* ExchangeCollectionViewCell.swift in Sources */,
 				BC6EE4172779F37900306EE3 /* NewspaperViewController.swift in Sources */,
 				BC6EE4152779F13900306EE3 /* NewspaperAPI.swift in Sources */,
 				BCC5703B2779DBE800E42DD8 /* NewspaperCollectionViewCell.swift in Sources */,
 				BCF3B23F278394C30048F21A /* WeatherModel.swift in Sources */,
+				BC1849302784D80E0031A3E5 /* CoinsClass.swift in Sources */,
 				BCC5702F2779C79E00E42DD8 /* HomeViewController.swift in Sources */,
 				BC6EE4192779F59500306EE3 /* NewsTableViewCell.swift in Sources */,
 				F41E5BE8277B5BD9004C4AAE /* ExchangeTableViewCell.swift in Sources */,
 				BC6EE425277B1ADB00306EE3 /* ConverterAPI.swift in Sources */,
+				BC1849322784D8DC0031A3E5 /* WeatherClass.swift in Sources */,
 				BCF3B235278330230048F21A /* CoinsModel.swift in Sources */,
 				BCF3B23327832FDD0048F21A /* CoinsAPI.swift in Sources */,
 				BC6EE427277B1C0C00306EE3 /* ConverterViewController.swift in Sources */,
+				BC18492C2784D59B0031A3E5 /* NewspaperClass.swift in Sources */,
 				BCF3B22F27832B800048F21A /* CoinTableViewCell.swift in Sources */,
 				BCF3B2392783434B0048F21A /* WeatherAPI.swift in Sources */,
 				BC6EE429277B214100306EE3 /* ConverterModel.swift in Sources */,
@@ -445,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

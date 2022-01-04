@@ -9,6 +9,6 @@ import UIKit
 
 class NewspaperCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var categoryImage: UIImageView!
     @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet weak var categoryImage: UIImageView!
 }

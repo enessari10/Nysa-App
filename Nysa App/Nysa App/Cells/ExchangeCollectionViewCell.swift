@@ -8,7 +8,7 @@
 import UIKit
 
 class ExchangeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var exchangeLabel: UILabel!
-    @IBOutlet weak var exchangeImage: UIImageView!
+    @IBOutlet weak var exchangeName: UILabel!
     
+    @IBOutlet weak var exchangeSymbol: UILabel!
 }

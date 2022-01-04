@@ -6,11 +6,15 @@
 //
 
 import UIKit
-
+protocol NewspaperCollectionCellDelegate {
+    func didSelectCell(atIndex:String)
+    
+}
 class NewspaperTableViewCell: UITableViewCell {
 
     @IBOutlet var newspaperCollectionView: UICollectionView!
-    var newspaperAPI = NewspaperAPI()
+    var newspaperClass = NewspaperClass()
+    var delegate : NewspaperCollectionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,15 +32,17 @@ class NewspaperTableViewCell: UITableViewCell {
 
 extension NewspaperTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newspaperAPI.categoryArray.count
+        return newspaperClass.categoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newspaperCollectionCell", for: indexPath) as! NewspaperCollectionViewCell
-        cell.categoryLabel.text = newspaperAPI.categoryArray[indexPath.row]
-        cell.categoryImage.image = newspaperAPI.categoryImages[indexPath.row]
+        cell.categoryLabel.text = newspaperClass.categoryArray[indexPath.row]
+        cell.categoryImage.image = newspaperClass.categoryImages[indexPath.row]
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectCell(atIndex: newspaperClass.categoryArray[indexPath.row])
+    }
     
 }

@@ -16,27 +16,26 @@ class ConverterViewController: UIViewController{
     @IBOutlet weak var toMoneyLabel: UILabel!
     @IBOutlet weak var fromMoneyLabel: UILabel!
     @IBOutlet weak var pickerViewButton: UIButton!
-    
-    var converterModelData : [ConverterModel] = []
-    var converterAPI = ConverterAPI()
+    var converterClass = ConverterClass()
     var screenWidth = UIScreen.main.bounds.width - 10
     var screenHeight = UIScreen.main.bounds.height / 2
     var selectedRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.isHidden = true
         showCurrencySymbols()
     }
+    
     func showCurrencySymbols(){
         DispatchQueue.main.async {
-            AF.request(self.converterAPI.converterSymbols+self.converterAPI.token+self.converterAPI.converterType).responseJSON{ response in
-                
+            AF.request(self.converterClass.converterAPI.converterSymbols + self.converterClass.converterAPI.token + self.converterClass.converterAPI.converterType).responseJSON{ response in
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
                     json.array?.forEach({(news) in
                         let news = ConverterModel(title: news["Currency"].stringValue)
-                        self.converterModelData.append(news)
+                        self.converterClass.converterModelData.append(news)
                     })
                 case .failure(let error):
                     print(error)
@@ -71,7 +70,7 @@ class ConverterViewController: UIViewController{
         
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler : { (UIAlertAction) in
             self.selectedRow = pickerView.selectedRow(inComponent: 0)
-            self.toMoneyLabel.text = self.converterModelData[self.selectedRow].title
+            self.toMoneyLabel.text = self.converterClass.converterModelData[self.selectedRow].title
         }))
         self.present(alert,animated: true,completion: nil)
     }
@@ -96,50 +95,50 @@ class ConverterViewController: UIViewController{
         
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler : { (UIAlertAction) in
             self.selectedRow = pickerView.selectedRow(inComponent: 0)
-            self.fromMoneyLabel.text = self.converterModelData[self.selectedRow].title
+            self.fromMoneyLabel.text = self.converterClass.converterModelData[self.selectedRow].title
         }))
         self.present(alert,animated: true,completion: nil)
     }
     @IBAction func convertPressedButton(_ sender: Any) {
-       
-            DispatchQueue.main.async {
-                AF.request(self.converterAPI.getExchange(from: self.toMoneyLabel.text!, to: self.fromMoneyLabel.text!, amount: self.amountTextfield.text!)).responseJSON{ response in
-                    
-                    switch response.result{
-                    case .success(let value):
-                        let json = JSON(value)
-                        print(json)
-                        print(json["conversion_result"].stringValue)
-                        self.resultLabel.isHidden = false
-                        self.resultLabel.text = json["conversion_result"].stringValue
-                    case .failure(let error):
-                        print(error)
-                        let alert = UIAlertController(title: "Error", message: "Convert API Error", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-                
-            }
-        }
         
+        DispatchQueue.main.async {
+            AF.request(self.converterClass.getExchange(from: self.toMoneyLabel.text!, to: self.fromMoneyLabel.text!, amount: self.amountTextfield.text!)).responseJSON{ response in
+                
+                switch response.result{
+                case .success(let value):
+                    let json = JSON(value)
+                    print(json)
+                    print(json["conversion_result"].stringValue)
+                    self.resultLabel.isHidden = false
+                    self.resultLabel.text = json["conversion_result"].stringValue
+                case .failure(let error):
+                    print(error)
+                    let alert = UIAlertController(title: "Error", message: "Convert API Error", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            
+        }
+    }
+    
     
     
 }
 extension ConverterViewController :UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.converterModelData.count
+        return self.converterClass.converterModelData.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return converterModelData[row].title
+        return converterClass.converterModelData[row].title
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
-        label.text = converterModelData[row].title
+        label.text = converterClass.converterModelData[row].title
         label.sizeToFit()
         return label
     }

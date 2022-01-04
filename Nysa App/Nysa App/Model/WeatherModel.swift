@@ -22,3 +22,4 @@ struct Weather{
 struct Main{
     var temp : String
 }
+
