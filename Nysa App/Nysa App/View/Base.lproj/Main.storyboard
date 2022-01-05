@@ -980,6 +980,9 @@
             <point key="canvasLocation" x="-192.05607476635512" y="709.50323974082073"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="xEk-e4-wdx"/>
+    </designables>
     <resources>
         <image name="404" width="333.33334350585938" height="333.33334350585938"/>
         <image name="banknote.fill" catalog="system" width="128" height="78"/>
