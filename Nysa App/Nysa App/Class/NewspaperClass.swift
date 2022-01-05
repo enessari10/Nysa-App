@@ -14,7 +14,7 @@ class NewspaperClass{
     var searchData : String = ""
     
     let categoryArray = ["Business","Entertainment","Environment","Food","Health","Politics","Science","Sports","Technology","Top","World"]
-    let categoryImages = [UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),]
+    let categoryImages = [UIImage(named: "briefcase"),UIImage(named: "home-entertainment-system"),UIImage(named: "city"),UIImage(named: "diet"),UIImage(named: "healthcare"),UIImage(named: "politics"),UIImage(named: "science"),UIImage(named: "running-man"),UIImage(named: "technology"),UIImage(named: "sportImages"),UIImage(named: "sportImages"),]
     
     func searchNews(searchWord : String) -> String{
         return newspaperAPI.newspaperURL + newspaperAPI.token + newspaperAPI.search + searchWord
