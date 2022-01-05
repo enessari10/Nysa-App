@@ -90,10 +90,7 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
         print("Location update failed, \(error)")
         let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let resultViewController = storyBoard.instantiateViewController(withIdentifier: "PermissionViewController") as! PermissionViewController
-            resultViewController.modalPresentationStyle = .automatic
-            self.present(resultViewController, animated: true, completion:nil)
+            
             
         }
         alert.addAction(okAction)

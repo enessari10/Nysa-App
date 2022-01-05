@@ -22,6 +22,7 @@ class CoinsViewController: UIViewController {
         coinTableView.dataSource = self
         animationView.isHidden = true
         getData()
+        coinTableView.reloadData()
     }
     
     
