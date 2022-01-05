@@ -12,12 +12,12 @@ import CoreLocation
 
 
 class HomeViewController: UIViewController,CLLocationManagerDelegate{
-
+    
     @IBOutlet var homeTableVİew: UITableView!
     var newspaperClass = NewspaperClass()
     let locationManager = CLLocationManager()
     var weatherClass = WeatherClass()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +52,8 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate{
                             self.homeTableVİew.reloadData()
                         case .failure(let error):
                             print(error)
-                            let alert = UIAlertController(title: "Error", message: "Weather API Error", preferredStyle: UIAlertController.Style.alert)
-                            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-                                
-                            }
-                            alert.addAction(okAction)
-                           
+                            let alert = UIAlertController(title: "Error", message: "Weather Location API Error", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             
                         }
@@ -72,17 +68,11 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate{
     @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location update failed, \(error)")
         let alert = UIAlertController(title: "Error", message: "Location update failed", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-            
-            
-        }
-        alert.addAction(okAction)
-       
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
     }
-
-
+    
+    
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,7 +95,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         }
         else if indexPath.row == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "exchangeCell", for: indexPath) as! ExchangeTableViewCell
-            
             return cell
         }
         else{
@@ -132,12 +121,12 @@ extension HomeViewController: NewspaperCollectionCellDelegate{
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let resultViewController = storyBoard.instantiateViewController(withIdentifier: "NewspaperViewController") as! NewspaperViewController
         resultViewController.state =  .search
-        self.newspaperClass.searchData =  atIndex
+        resultViewController.search =  atIndex
         resultViewController.title = atIndex
         self.navigationController?.pushViewController(resultViewController, animated: true)
     }
     
-  
+    
     
     
     

@@ -23,6 +23,8 @@ class NewspaperViewController: UIViewController {
     @IBOutlet var animationView: AnimationView!
     var newspaperClass = NewspaperClass()
     var state: NewspaperPageState = .normal
+    var search : String = ""
+
     
     
     
@@ -30,6 +32,7 @@ class NewspaperViewController: UIViewController {
         super.viewDidLoad()
         self.newsTableView.delegate = self
         self.newsTableView.dataSource = self
+        print(state)
         if state == .normal{
             showData()
         }else{
@@ -38,9 +41,10 @@ class NewspaperViewController: UIViewController {
     }
     
     func showSearchData(){
+        print("ENESS \(self.newspaperClass.searchData)")
         animationStart()
         DispatchQueue.main.async {
-            AF.request(self.newspaperClass.searchNews(searchWord: self.newspaperClass.searchData)).responseJSON{ response in
+            AF.request(self.newspaperClass.searchNews(searchWord: self.search)).responseJSON{ response in
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
@@ -54,7 +58,7 @@ class NewspaperViewController: UIViewController {
                     
                 case .failure(let error):
                     print(error)
-                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: "Newspaper API Error", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -81,7 +85,7 @@ class NewspaperViewController: UIViewController {
                     
                 case .failure(let error):
                     print(error)
-                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: "Newspaper API Error", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }

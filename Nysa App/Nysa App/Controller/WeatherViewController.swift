@@ -47,9 +47,6 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
             if location.horizontalAccuracy > 0 {
                 locationManager.stopUpdatingLocation()
                 DispatchQueue.main.async {
-                    
-                    
-                    
                     AF.request(self.weatherClass.urlEdit(url: self.weatherClass.weatherAPI.weatherURL, lat: location.coordinate.latitude, long: location.coordinate.longitude, token: self.weatherClass.weatherAPI.weatherToken)).responseJSON{ response in
                         switch response.result{
                         case .success(let value):
@@ -66,15 +63,8 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
                             
                         case .failure(let error):
                             print(error)
-                            let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
-                            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-                                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                                let resultViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                                self.navigationController?.pushViewController(resultViewController, animated: true)
-                                
-                            }
-                            alert.addAction(okAction)
-                           
+                            let alert = UIAlertController(title: "Error", message: "Location Weather API Error", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                             
                         }
@@ -88,13 +78,8 @@ class WeatherViewController: UIViewController,CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location update failed, \(error)")
-        let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-            
-            
-        }
-        alert.addAction(okAction)
-       
+        let alert = UIAlertController(title: "Error", message: "Location update failed", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
     }

@@ -35,16 +35,16 @@ class CoinsViewController: UIViewController {
                     let json = JSON(value)
                     let data = json["data"]
                     for i in 0..<data.count{
-                      
+                        
                         let coinData = CoinsModel(name: data[i]["name"].stringValue, symbol: data[i]["symbol"].stringValue, price: data[i]["priceUsd"].stringValue)
                         self.coinClass.myArray.append(coinData)
                         self.coinTableView.reloadData()
                         self.animationStop()
                     }
-       
+                    
                 case .failure(let error):
                     print(error)
-                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: "Coins Data API Error", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -66,8 +66,8 @@ class CoinsViewController: UIViewController {
         animationView!.stop()
         animationView.isHidden = true
     }
-
-
+    
+    
 }
 extension CoinsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

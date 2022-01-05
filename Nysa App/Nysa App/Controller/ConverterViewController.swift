@@ -12,7 +12,6 @@ import SwiftyJSON
 class ConverterViewController: UIViewController{
     
     @IBOutlet weak var amountTextfield: UITextField!
-    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var toMoneyLabel: UILabel!
     @IBOutlet weak var fromMoneyLabel: UILabel!
     @IBOutlet weak var pickerViewButton: UIButton!
@@ -23,7 +22,6 @@ class ConverterViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.isHidden = true
         showCurrencySymbols()
     }
     
@@ -39,7 +37,7 @@ class ConverterViewController: UIViewController{
                     })
                 case .failure(let error):
                     print(error)
-                    let alert = UIAlertController(title: "Error", message: "Connection time out", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: "Currency Symbols API Error", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -107,10 +105,9 @@ class ConverterViewController: UIViewController{
                 switch response.result{
                 case .success(let value):
                     let json = JSON(value)
-                    print(json)
-                    print(json["conversion_result"].stringValue)
-                    self.resultLabel.isHidden = false
-                    self.resultLabel.text = json["conversion_result"].stringValue
+                    let alert = UIAlertController(title: "Result", message: "\(json["conversion_result"].stringValue)", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 case .failure(let error):
                     print(error)
                     let alert = UIAlertController(title: "Error", message: "Convert API Error", preferredStyle: UIAlertController.Style.alert)
