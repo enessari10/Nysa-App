@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ConverterViewController: UIViewController{
+class ConverterViewController: UIViewController, UITextViewDelegate{
     
     @IBOutlet weak var amountTextfield: UITextField!
     @IBOutlet weak var toMoneyLabel: UILabel!
@@ -23,8 +23,13 @@ class ConverterViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         showCurrencySymbols()
+        self.hideKeyboardWhenTappedAround()
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
     func showCurrencySymbols(){
         DispatchQueue.main.async {
             AF.request(self.converterClass.converterAPI.converterSymbols + self.converterClass.converterAPI.token + self.converterClass.converterAPI.converterType).responseJSON{ response in
@@ -141,4 +146,15 @@ extension ConverterViewController :UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     
+}
+extension ConverterViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ConverterViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

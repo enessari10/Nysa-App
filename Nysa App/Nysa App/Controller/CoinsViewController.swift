@@ -35,7 +35,6 @@ class CoinsViewController: UIViewController {
                     let json = JSON(value)
                     let data = json["data"]
                     for i in 0..<data.count{
-                        
                         let coinData = CoinsModel(name: data[i]["name"].stringValue, symbol: data[i]["symbol"].stringValue, price: data[i]["priceUsd"].stringValue)
                         self.coinClass.myArray.append(coinData)
                         self.coinTableView.reloadData()
@@ -75,7 +74,9 @@ extension CoinsViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell", for: indexPath) as! CoinTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell", for: indexPath) as? CoinTableViewCell else {
+            fatalError()
+        }
         let money = coinClass.myArray[indexPath.row].price
         let index = money.index(money.startIndex, offsetBy: 7)
         cell.coinShortName.text = coinClass.myArray[indexPath.row].symbol

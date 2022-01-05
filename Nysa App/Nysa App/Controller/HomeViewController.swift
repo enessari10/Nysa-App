@@ -65,13 +65,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate{
         }
     }
     
-    @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Location update failed, \(error)")
-        let alert = UIAlertController(title: "Error", message: "Location update failed", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -82,19 +75,24 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0{
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! WeatherTableViewCell
+            guard let  cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherTableViewCell else {
+                fatalError()
+            }
             cell.cityLabel.text = self.weatherClass.weatherCity
             cell.temperatureLabel.text = self.weatherClass.weatherTemp
             return cell
         }
         else if indexPath.row == 1{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "newspaperCell", for: indexPath) as! NewspaperTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "newspaperCell", for: indexPath) as? NewspaperTableViewCell else {
+                fatalError()
+            }
             cell.delegate = self
             return cell
         }
         else if indexPath.row == 2{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "exchangeCell", for: indexPath) as! ExchangeTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "exchangeCell", for: indexPath) as? ExchangeTableViewCell else {
+                fatalError()
+            }
             return cell
         }
         else{
